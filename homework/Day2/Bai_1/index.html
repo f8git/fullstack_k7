@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        text-align: left;
+      }
+    </style>
   </head>
   <body>
     <h1>Try a free sample</h1>
@@ -13,27 +23,45 @@
       you don't miss out on news introducing the new coffees that we add our
       store regularly
     </p>
-    <div class="left">
-      <div>
-        <h2>First name</h2>
-        <input type="text" placeholder="John" />
-        <h2>Email address</h2>
-        <input type="text" placeholder="john@example.com" />
-        <h2>City</h2>
-        <input type="text" placeholder="London" />
-        <h2>ZIP code</h2>
-        <input type="text" placeholder="EC2Y8DS" />
-      </div>
-    </div>
-    <div class="right">
-      <h2>Last name</h2>
-      <input type="text" placeholder="John" />
-      <h2>Address</h2>
-      <input type="text" placeholder="john@example.com" />
-      <h2>State(optional)</h2>
-      <input type="text" placeholder="" />
-      <h2>Country</h2>
-      <input type="range" placeholder="EC2Y8DS" />
-    </div>
+    <table>
+      <tr>
+        <td>First name</td>
+        <td>Last name</td>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder="John" /></td>
+        <td><input type="text" placeholder="Smith" /></td>
+      </tr>
+      <tr>
+        <td>Email address</td>
+        <td>Address</td>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder="john@example.com" /></td>
+        <td><input type="text" placeholder="Silk St" /></td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td>State(optional)</td>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder="London" /></td>
+        <td><input type="text" placeholder="" /></td>
+      </tr>
+      <tr>
+        <td>ZIP code</td>
+        <td>Country</td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" placeholder="EC2Y8DS" style="width: max-content" />
+        </td>
+        <td>
+          <select name="lang" id="lang-select">
+            <option>United Kingdom</option>
+          </select>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
