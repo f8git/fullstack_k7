@@ -5,63 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      table {
-        border-collapse: collapse;
-        width: 100%;
-      }
       th,
       td {
         text-align: left;
       }
+      .ip {
+        width: 80%;
+      }
+      label {
+        display: block;
+      }
+      label span {
+        color: rgb(174, 174, 174);
+      }
     </style>
   </head>
   <body>
-    <h1>Try a free sample</h1>
-    <p>
-      Sign up to get a coupon you can redeem at your nearest Dancing Goat cafe
-      for a sample of the Colombia Carlos Imbachi coffee. We'll also make sure
-      you don't miss out on news introducing the new coffees that we add our
-      store regularly
-    </p>
-    <table>
-      <tr>
-        <td>First name</td>
-        <td>Last name</td>
-      </tr>
-      <tr>
-        <td><input type="text" placeholder="John" /></td>
-        <td><input type="text" placeholder="Smith" /></td>
-      </tr>
-      <tr>
-        <td>Email address</td>
-        <td>Address</td>
-      </tr>
-      <tr>
-        <td><input type="text" placeholder="john@example.com" /></td>
-        <td><input type="text" placeholder="Silk St" /></td>
-      </tr>
-      <tr>
-        <td>City</td>
-        <td>State(optional)</td>
-      </tr>
-      <tr>
-        <td><input type="text" placeholder="London" /></td>
-        <td><input type="text" placeholder="" /></td>
-      </tr>
-      <tr>
-        <td>ZIP code</td>
-        <td>Country</td>
-      </tr>
-      <tr>
-        <td>
-          <input type="text" placeholder="EC2Y8DS" style="width: max-content" />
-        </td>
-        <td>
-          <select name="lang" id="lang-select">
-            <option>United Kingdom</option>
-          </select>
-        </td>
-      </tr>
-    </table>
+    <form action="xuly">
+      <h1>Try a free sample</h1>
+      <p>
+        Sign up to get a coupon you can redeem at your nearest Dancing Goat cafe
+        for a sample of the Colombia Carlos Imbachi coffee. We'll also make sure
+        you don't miss out on news introducing the new coffees that we add our
+        store regularly
+      </p>
+      <table width="50%" cellspacing="5" cellpadding="0" border="0">
+        <tr>
+          <th>
+            <label for="">First name</label
+            ><input type="text" placeholder="John" class="ip" />
+          </th>
+          <th>
+            <label for="">Last name</label>
+            <input type="text" placeholder="Smith" class="ip" />
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <label for="">Email address</label
+            ><input type="email" placeholder="john@example.com" class="ip" />
+          </th>
+          <th>
+            <label for="">Address</label>
+            <input type="text" placeholder="Silk St" class="ip" />
+          </th>
+        </tr>
+
+        <tr>
+          <th>
+            <label for="">City</label>
+            <input type="text" placeholder="London" class="ip" />
+          </th>
+          <th>
+            <label for="">State<span>(optional)</span></label>
+            <input type="text" placeholder="" class="ip" />
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <label for="">ZIP code</label>
+            <input type="number" placeholder="EC2Y8DS" class="ip" />
+          </th>
+          <th>
+            <label for="">Country</label>
+            <select name="lang" id="lang-select" class="ip">
+              <option>United Kingdom</option>
+            </select>
+          </th>
+        </tr>
+      </table>
+      <input
+        type="submit"
+        value="SEND ME FREE COFFEES"
+        style="background-color: rgb(21, 122, 122); color: white"
+      />
+    </form>
   </body>
 </html>
