@@ -1,0 +1,15 @@
+.left-info {
+  float: left;
+  display: inline-block block;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #ffb739;
+}
+/* .content h1 ~ [class^="title"] {
+  color: red;
+} */
