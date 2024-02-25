@@ -16,10 +16,16 @@
       <table width="60%">
         <tr>
           <td>
-            <input class="ip" type="text" placeholder="*Enter your full name" />
+            <input
+              name="full_name"
+              class="ip"
+              type="text"
+              placeholder="*Enter your full name"
+            />
           </td>
           <td>
             <input
+              name="email"
               class="ip"
               type="text"
               placeholder="*Enter your email address"
@@ -28,7 +34,12 @@
         </tr>
         <tr>
           <td>
-            <input class="ip" type="text" placeholder="*Enter your subject" />
+            <input
+              name="subject"
+              class="ip"
+              type="text"
+              placeholder="*Enter your subject"
+            />
           </td>
           <td></td>
         </tr>
@@ -39,13 +50,13 @@
               rows="4"
               cols="50"
               placeholder="* Your message here"
-              name=""
+              name="text_massage"
             ></textarea>
           </td>
         </tr>
       </table>
       <div>
-        <input style="float: left" type="submit" value="Send message" />
+        <button style="float: left">Send message</button>
         <p><strong>* Please fill all require form field, thanks</strong></p>
       </div>
     </form>

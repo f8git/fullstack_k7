@@ -18,6 +18,11 @@
       label span {
         color: rgb(174, 174, 174);
       }
+      button {
+        background-color: rgb(21, 122, 122);
+        color: white;
+        /* border: 1px; */
+      }
     </style>
   </head>
   <body>
@@ -32,53 +37,74 @@
       <table width="50%" cellspacing="5" cellpadding="0" border="0">
         <tr>
           <th>
-            <label for="">First name</label
-            ><input type="text" placeholder="John" class="ip" />
+            <label>First name</label
+            ><input
+              name="first_name"
+              type="text"
+              placeholder="John"
+              class="ip"
+            />
           </th>
           <th>
-            <label for="">Last name</label>
-            <input type="text" placeholder="Smith" class="ip" />
+            <label>Last name</label>
+            <input
+              name="last_name"
+              type="text"
+              placeholder="Smith"
+              class="ip"
+            />
           </th>
         </tr>
         <tr>
           <th>
-            <label for="">Email address</label
-            ><input type="email" placeholder="john@example.com" class="ip" />
+            <label>Email address</label
+            ><input
+              name="email"
+              type="email"
+              placeholder="john@example.com"
+              class="ip"
+            />
           </th>
           <th>
-            <label for="">Address</label>
-            <input type="text" placeholder="Silk St" class="ip" />
+            <label>Address</label>
+            <input
+              name="address"
+              type="text"
+              placeholder="Silk St"
+              class="ip"
+            />
           </th>
         </tr>
 
         <tr>
           <th>
-            <label for="">City</label>
-            <input type="text" placeholder="London" class="ip" />
+            <label>City</label>
+            <input name="city" type="text" placeholder="London" class="ip" />
           </th>
           <th>
-            <label for="">State<span>(optional)</span></label>
-            <input type="text" placeholder="" class="ip" />
+            <label>State<span>(optional)</span></label>
+            <input name="state" type="text" placeholder="" class="ip" />
           </th>
         </tr>
         <tr>
           <th>
-            <label for="">ZIP code</label>
-            <input type="number" placeholder="EC2Y8DS" class="ip" />
+            <label>ZIP code</label>
+            <input
+              name="zip_code"
+              type="number"
+              placeholder="EC2Y8DS"
+              class="ip"
+            />
           </th>
           <th>
-            <label for="">Country</label>
+            <label>Country</label>
             <select name="lang" id="lang-select" class="ip">
               <option>United Kingdom</option>
             </select>
           </th>
         </tr>
       </table>
-      <input
-        type="submit"
-        value="SEND ME FREE COFFEES"
-        style="background-color: rgb(21, 122, 122); color: white"
-      />
+      <button>SEND ME FREE COFFEES</button>
     </form>
   </body>
 </html>
