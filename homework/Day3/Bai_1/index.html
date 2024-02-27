@@ -9,14 +9,19 @@
   <body>
     <form
       action="https://api-gateway.fullstack.edu.vn/action_page.php"
-      method="post"
+      method="get"
     >
       <h1>CONTACT US</h1>
       <div class="left-info">
         <h2>Contact info</h2>
         <section class="contact-info location-info">
           <i class="fa-solid fa-location-dot"></i>
-          <span>321 Awesome Street New York, NY 17022</span>
+          <span>
+            
+              321 Awesome Street 
+              New York, NY 17022
+             
+          </span>
         </section>
         <section class="contact-info email-info">
           <i class="fa-solid fa-envelope"></i>
@@ -25,24 +30,27 @@
         <section class="contact-info location-info">
           <i class="fa-solid fa-phone"></i>
           <span>0364333779</span>
-        </section>
+        <!-- </section>
         <label for="lbl-name">Ho va ten</label>
         <input
           type="text"
           id="lbl-name"
           name="name"
           placeholder="Ho va ten..."
-        />
+        /> -->
       </div>
-      <!-- <div class="right-info">
-        <div class="content">
-          <h2 class="title-2">Hoc lap trinh de di lam</h2>
-          <h1 class="title-1">Hoc lap trinh de di lam</h1>
-          <h2 class="title-2">Hoc lap trinh de di lam</h2>
-          <h3 class="title-small">Hoc lap trinh de di lam</h3>
-          <h2 class="sub-title">Manh Tien F8</h2>
-        </div> -->
-        <button>Submit</button>
+      <div class="right-info">
+        <h2>Havig Any Query! Or Book an appointment</h2>
+        <label>
+          <input type="text" name="name" placeholder="Your Name">
+        </label>
+        <label>
+          <input type="email" name="email" placeholder="Your Email">
+        </label>
+        
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+        <button>Send Message</button>
       </div>
     </form>
     <script

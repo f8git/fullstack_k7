@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bai3.css" />
+  </head>
+  <body>
+    <form
+      action="https://api-gateway.fullstack.edu.vn/action_page.php"
+      method=""
+    >
+      <div class="grid wide feedback">
+        <div class="row">
+          <div class="col l-2 m-2 c-2">
+            <label for="username">Username</label>
+          </div>
+          <div class="col l-10 m-10 c-10">
+            <input type="text" id="username" name="username" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l-2 m-2 c-2">
+            <label for="password">Password</label>
+          </div>
+          <div class="col l-10 m-10 c-10">
+            <input type="password" id="password" name="password" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l-2 m-2 c-2">
+            <label for="city"
+              >City of <br />
+              Employment</label
+            >
+          </div>
+          <div class="col l-10 m-10 c-10">
+            <input type="text" id="city" name="city" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l-2 m-2 c-2">
+            <label>Web Server</label>
+          </div>
+          <div class="col l-10 m-10 c-10">
+            <select name="server" id="server">
+              <option value="unknow">--Choose a server--</option>
+              <option value="fpt">FPT</option>
+              <option value="vnpt">VNPT</option>
+              <option value="viettel">VIETTEL</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l-2 m-2 c-2">
+            <label>Please speccify your role</label>
+          </div>
+          <div class="col l-10 m-10 c-10">
+            <label class="role">
+              <input type="radio" name="role" value="admin" />Admin
+            </label>
+            <label class="role">
+              <input type="radio" name="role" value="engineer" />Engineer
+            </label>
+            <label class="role">
+              <input type="radio" name="role" value="manager" />Manager</label
+            >
+            <label class="role">
+              <input type="radio" name="role" value="guest" />Guest
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l-2 m-2 c-2">
+            <label>Single Sign-on to the following</label>
+          </div>
+          <div class="col l-10 m-10 c-10">
+            <label class="role">
+              <input type="checkbox" name="role" value="admin" />Mail
+            </label>
+            <label class="role">
+              <input type="checkbox" name="role" value="engineer" />Payroll
+            </label>
+            <label class="role">
+              <input
+                type="checkbox"
+                name="role"
+                value="manager"
+              />Self-srvice</label
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l-2 m-2 c-2"></div>
+          <div class="col l-10 m-10 c-10">
+            <button>Login</button>
+            <button type="reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

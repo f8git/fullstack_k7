@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>HTML FORM</h1>
+    <form
+      action="https://api-gateway.fullstack.edu.vn/action_page.php"
+      method="get"
+    >
+      <div>
+        <label for="fullname">Fullname</label>
+        <input
+          type="text"
+          name="fullname"
+          placeholder="Vui long nhap ten"
+          id="fullname"
+          value="Ngoc Diem"
+        />
+        <!-- 
+            disable: vo hieu hoa
+            readonly: vo hieu hoa
+            required: truong bat buoc phai nhap
+            maxlength = "10": do dai toi da la 10 ki tu
+         -->
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Nhap email" id="email" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Nhap password"
+          id="password"
+        />
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <input
+          type="number"
+          name="age"
+          placeholder="Nhap tuoi"
+          id="password"
+          value=""
+          min="10"
+          max="50"
+          step="0.1"
+        />
+      </div>
+      <div>
+        <label for="avartar">Avartar</label>
+        <input type="file" name="avartar" id="avartar" multiple />
+      </div>
+      <div>
+        <label>Gioi tinh</label>
+        <label
+          ><input type="radio" name="gender" value="UnKnow" checked />Khong
+          biet</label
+        >
+        <label>
+          <input type="radio" name="gender" value="male"/> Nam</label
+        >
+        <label> <input type="radio" name="gender" value="female" />Nu</label>
+      </div>
+    </div>
+    <div>
+      <label>Gioi tinh</label>
+      <label
+        ><input type="checkbox" name="source" value="facebook" checked />Facebook</label
+      >
+      <label>
+        <input type="checkbox" name="source" value="google"/>Google</label
+      >
+      <label> <input type="checkbox" name="source" value="website" >Website</label>
+    </div>
+    <div>
+        <label for="province">Tinh/Thanh pho</label>
+        <select name="province" id="province">
+            <option value="0">Chon tinh/Thanh pho</option>
+            <option value="1">Ha Noi</option>
+            <option value="2">Da Nang</option>
+            <option value="3">Ho Chi Minh</option>
+        </select>
+    </div>
+    <div>
+        <label for="message">Tin nhan</label>
+        <textarea name="message" id="message" placeholder="Tin nhan ..." cols="30" rows="10"></textarea>
+    </div>
+      <button type="submit">Submit</button>
+      <button type="button">Button</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
