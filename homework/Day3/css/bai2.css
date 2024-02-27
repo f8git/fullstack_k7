@@ -366,10 +366,7 @@ body {
 }
 
 .feedback h2 {
-  /* margin: 100px 0; */
-  /* font-size: 100px; */
-  color: #0000;
-  /* background: orange; */
+  color: black;
   margin-top: 20;
   margin-bottom: 60px;
 }
