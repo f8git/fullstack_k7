@@ -1,0 +1,69 @@
+.content {
+  text-align: center;
+  width: 70%;
+}
+
+form {
+  height: auto;
+  background: coral;
+  text-align: left;
+  padding: 20px 20px 14px;
+  border-radius: 8px;
+  background: #334455;
+  color: var(#fff);
+  margin-top: 100px;
+}
+
+form p {
+  color: white;
+  /* opacity: 0.9; */
+  line-height: 1.6rem;
+}
+
+h2 {
+  margin: 0;
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h2 span {
+  color: #fea500;
+}
+
+.btn,
+input {
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  padding: 8px 16px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  height: 30px;
+}
+
+.btn {
+  margin: 0 2px;
+  background: #f8db35;
+}
+
+input {
+  width: 180px;
+}
+
+form:hover input::placeholder {
+  color: #fea500;
+}
+
+form:hover input {
+  background: #ddd;
+}
+
+form:hover button {
+  background: #fea500;
+  color: #fff;
+}
+
+input::placeholder {
+  font-size: 1.2rem;
+}

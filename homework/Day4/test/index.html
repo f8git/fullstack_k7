@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .product__images {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin: 40px auto;
+      }
+      .product__image {
+        position: absolute;
+        width: 100%;
+        transition-property: opacity, visibility;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+      }
+      .product__image:last-child {
+        opacity: 1;
+        visibility: visible;
+      }
+      .product__images:hover .product__image:first-child {
+        opacity: 1;
+        visibility: visible;
+      }
+      .product__images:hover .product__image:last-child {
+        opacity: 0;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="product__images">
+        <img
+          class="product__image"
+          src="https://service.ndng.net/duong_reversed.jpg"
+          alt="Anh1"
+        />
+        <img
+          class="product__image"
+          src="https://ndng.net/duong.jpg"
+          alt="Anh2"
+        />
+      </div>
+    </div>
+  </body>
+</html>

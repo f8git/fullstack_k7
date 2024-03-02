@@ -387,7 +387,7 @@ body {
 }
 
 .feedback-item {
-  /* background-color: aqua; */
+  background-color: aqua;
   text-align: left;
   position: relative;
   width: auto;
@@ -400,8 +400,10 @@ img {
   height: auto;
   top: 0;
   left: 0;
-  line-height: 80px;
-  padding-right: 5px;
+  /* bottom: 0;
+  right: 0; */
+  /* line-height: 80px;
+  padding-right: 5px; */
 }
 
 blockquote {

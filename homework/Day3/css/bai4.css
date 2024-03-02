@@ -16,17 +16,31 @@ button {
   /* border: none; */
   /* padding: 0;
   margin: 0; */
-  margin-right: 26px;
+  /* margin-right: 26px; */
 
   height: 26px;
   border: none;
   display: inline;
-  background-color: white;
+  background-color: rgb(137, 20, 20);
   margin-top: 0;
   color: #af9655;
+  padding-left: 2px;
 }
 
-.btn1 {
+.btn {
+  outline: none;
+}
+
+.btn + .btn {
+  margin-left: 16px;
+}
+
+/* .btn1 {
+  color: white;
+  background-color: #af9655;
+} */
+
+button:hover {
   color: white;
   background-color: #af9655;
 }
@@ -65,7 +79,7 @@ button {
   width: 70%;
 }
 body {
-  width: 1200px;
+  width: 100%;
 }
 .responsive-map-container {
   position: relative;

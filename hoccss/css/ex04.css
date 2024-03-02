@@ -1,0 +1,44 @@
+/* 
+Thanh phan gia
+cu phap: selector::pesudo-element {
+
+}
+::after
+::before
+::first-letter
+::first-line
+::selection
+::placeholder
+*/
+/* 
+h1::before {
+  content: "a";
+}
+h1::after {
+  content: "b";
+} */
+
+/* .title::before {
+  content: attr(data-index);
+} */
+
+p::first-line {
+  color: red;
+}
+
+p::first-letter {
+  color: green;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+p::selection {
+  background: black;
+  color: white;
+}
+
+input::placeholder {
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+}

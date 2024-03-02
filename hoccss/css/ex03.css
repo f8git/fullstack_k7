@@ -1,0 +1,38 @@
+/* 
+Attribute Selector
+tag[attribute]: chon the tag co thuoc tinh  la attribute
+tag[attribute="value"]: chon the tag co attribute = value
+tag[attribute^="value"]: chon the tag co attribute co gia tri bat dau la value
+tag[attribute*="value"]:
+
+
+*/
+
+/* ul li a[target] {
+  color: red;
+} */
+
+/* ul li a[href="http://fullstack.edu.vn"]
+{
+  color: red;
+} */
+/* ul li a[href^="http://fullstack.edu.vn"]
+{
+  color: red;
+} */
+/* ul li a[href*="fullstack.edu.vn"] {
+  color: red;
+} */
+/* ul li [href$=".net"] {
+  color: red;
+}
+
+.row [class^="col-"] {
+  color: red;
+} */
+
+.box * {
+  color: red;
+  border: 1px solid red;
+  background: cyan;
+}

@@ -1,0 +1,88 @@
+/* 
+Lop gia(State)
+Cu phap: selector:pseudo-class {
+}
+
+1. hover, active, focus
+Luu y: 
+- focus chi ap dung cho form
+- hover va active ap dung voi tat ca the html
+
+ngoai le: de them mot the html khong phai form co focus --> them thuoc tinh tabindex
+
+2. not --> ngoai tru, phu dinh
+3. disabled
+4.checked
+*/
+
+/* .btn:hover {
+  background: green;
+}
+
+.btn:active {
+  background: chocolate;
+}
+
+.btn:focus {
+  background: blue;
+} */
+
+/* input:focus::placeholder {
+  color: red;
+}
+
+input:active::placeholder {
+  font-style: italic;
+}
+
+h1:focus {
+  color: red;
+} */
+
+.products .item:not(.active):not(.inactive) {
+  color: red;
+}
+
+.btn {
+  background: green;
+  border: 0;
+}
+
+/* .btn[disabled] {
+  color: #fff;
+} */
+
+.btn:disabled {
+  color: #fff;
+}
+
+input[type="checkbox"]:checked ~ span {
+  text-decoration: line-through;
+  color: blue;
+}
+
+input[type="checkbox"]:checked:disabled ~ span {
+  color: gray;
+}
+
+/* .products h2:first-child {
+  color: red;
+}
+.products h2:last-child {
+  color: green;
+} */
+
+/* .products h2:first-of-type {
+  color: red;
+}
+.products h2:last-of-type {
+  color: green;
+} */
+
+/* .products h2:nth-child(2n + 2) {
+  color: blueviolet;
+} */
+
+/* .products h2:nth-of-type(2n + 2) {
+  color: blueviolet;
+}

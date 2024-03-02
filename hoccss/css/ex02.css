@@ -1,0 +1,49 @@
+/*
+ SELECTOR cung cap (cung trong mot the html): selector1selector2selector
+==> Luu y: khong can quan tam den thu tu (tru truong hop su dung tagname phai o dau)
+
+a.link#link  --> chon the a co class = link va id = link
+ ung dung: 
+ - trong cac tinh huong ko th sua html
+ - day do uu tien len cao hon
+ */
+/* h1.title {
+  color: red;
+}
+
+h2.title {
+  color: green;
+} */
+
+/*
+Selector nam sau cung cap : ~
+ */
+
+/* ul ~ p {
+  color: red;
+}
+
+ul ~ div p {
+  color: green;
+} */
+/* 
+.todos input:checked ~ span {
+  text-decoration: line-through;
+} */
+
+/*
+Selector nam sau lien ke cung cap: + 
+ */
+/* h2 + h2 {
+  color: red;
+} */
+
+/* 
+Selector gop: ,
+Nhieu selector su dung chung 1 block code
+*/
+
+p + h2,
+p + h2 + h2 {
+  color: red;
+}
