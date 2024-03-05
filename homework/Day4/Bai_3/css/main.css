@@ -166,6 +166,6 @@ nav {
   color: orange;
 }
 
-.row:hover h2 {
-  color: red;
+.btn1:active body {
+  background: coral;
 }

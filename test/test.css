@@ -1,0 +1,24 @@
+.item {
+  width: 50%;
+}
+.item .image:first-child img {
+  margin: 0 auto;
+}
+.div-1 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: chocolate;
+  display: inline-block;
+}
+.div-2 {
+  display: inline;
+  position: absolute;
+
+  /* height: 50px; */
+  background: blanchedalmond;
+  /* top: 50%;
+  transform: translateY(-50%); */
+  top: 0;
+  bottom: 0;
+}

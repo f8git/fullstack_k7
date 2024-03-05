@@ -1,0 +1,272 @@
+h1 {
+  text-align: left;
+  font-family: "Lobster", sans-serif !important;
+  font-weight: 100;
+  font-size: 3.8rem;
+  margin-bottom: 10px;
+}
+
+.text-form p span {
+  color: red;
+}
+
+/* form {
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+} */
+
+.text-form {
+  display: flex;
+  justify-content: center;
+}
+
+form .text-form p {
+  text-align: left;
+  width: 100%;
+  line-height: 1.5rem;
+  margin-top: 0;
+  color: #727070;
+}
+/* .name {
+  display: flex;
+} */
+
+.item {
+  /* font-size: 0; */
+  position: relative;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+/* .yourname i {
+  font-size: ;
+} */
+
+.item input,
+.item label {
+  font-size: xx-small;
+  /* line-height: 22px; */
+  border: solid 1px #dddddd;
+  padding: 6px;
+  height: 22px;
+  outline: none;
+}
+
+.item input {
+  width: 100%;
+}
+
+.item label {
+  background: #dddddd;
+  width: 22px;
+}
+
+.item label:hover {
+  background-color: #333333;
+  color: white;
+  border: solid 1px #333333;
+}
+
+.item label:hover ~ input {
+  border: solid 1px #333333;
+}
+.item label:hover ~ textarea {
+  border: solid 1px #333333;
+}
+
+.item:has(input:hover) label {
+  background-color: #333333;
+  color: white;
+  border: solid 1px #333333;
+}
+
+.item:has(select:hover) label {
+  background-color: #333333;
+  color: white;
+  border: solid 1px #333333;
+}
+
+.item:has(textarea:hover) label {
+  background-color: #333333;
+  color: white;
+  border: solid 1px #333333;
+}
+
+.item input:hover {
+  border: solid 1px #333333;
+}
+
+.item select:hover {
+  border: solid 1px #333333;
+}
+.item textarea:hover {
+  border: solid 1px #333333;
+}
+
+.item label:hover ~ p {
+  display: block;
+}
+.item input:hover ~ p {
+  display: block;
+}
+.item select:hover ~ p {
+  display: block;
+}
+.item textarea:hover ~ p {
+  display: block;
+}
+
+.item:has(input:focus) .icon-end i {
+  opacity: 0;
+  visibility: hidden;
+}
+.item:has(textarea:focus) .icon-end i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.item:has(input:focus) .icon-end i + i {
+  opacity: 1;
+  visibility: visible;
+}
+.item:has(textarea:focus) .icon-end i + i {
+  opacity: 1;
+  visibility: visible;
+}
+
+.item p {
+  line-height: 25px;
+  position: absolute;
+  height: 25px;
+  padding: 0 8px;
+  display: none;
+  background: #333333;
+  color: white;
+  left: 17px;
+  top: -46px;
+}
+
+.item p::before {
+  content: "";
+  position: absolute;
+  /* display: none; */
+  border-color: #333333 transparent transparent transparent !important;
+  border-width: 10px 12px;
+  border-style: solid;
+  top: 21px;
+  left: 21px;
+}
+
+.item p + p {
+  position: absolute;
+  color: #dddddd;
+}
+
+.item input {
+  position: relative;
+}
+
+.icon-end i {
+  position: absolute;
+  color: #dddddd;
+  font-size: 0.5rem;
+  width: auto;
+  height: 22px;
+  right: 8px;
+  /* top: 50%; */
+  /* transform: translateY(-15%); */
+  margin-top: 8px;
+  opacity: 0;
+  visibility: hidden;
+  /* background: #dddddd; */
+}
+
+.icon-end i:first-child {
+  opacity: 1;
+  visibility: visible;
+}
+
+.subject select {
+  width: 100%;
+  outline: none;
+  border: solid #dddddd 1px;
+}
+
+.message textarea {
+  width: 100%;
+  outline: none;
+  border: solid 1px #dddddd;
+}
+
+.message {
+  height: auto;
+}
+
+.message label {
+  height: auto;
+}
+/* .fa-star {
+  margin-top: 11px;
+} */
+.footer-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  height: 40x;
+  vertical-align: middle;
+}
+
+.btn button {
+  display: inline-block;
+  outline: none;
+  color: white;
+  background: red;
+  padding: 7px 20px;
+  border: none;
+}
+.footer-checkbox {
+  display: inline-block;
+  line-height: 25.5px;
+}
+
+.footer-checkbox input {
+  vertical-align: middle;
+
+  /* background: chocolate;
+  outline: none;
+  border:
+   none; */
+}
+
+.footer-checkbox label {
+  margin-left: 5px;
+  color: #727070;
+}
+
+.footer-checkbox span {
+  position: relative;
+  border: solid 2px #dddddd;
+  padding: 1px 7px;
+}
+
+.footer-checkbox:focus i {
+  opacity: 1;
+  visibility: visible;
+}
+
+.footer-checkbox span i {
+  position: absolute;
+  width: auto;
+  top: 50%;
+  /* left: 50%; */
+  left: 50%;
+  /* transform: translateY(-50%); */
+  /* transform: translatex(50%); */
+  transform: translate(-50%, -50%);
+  padding: auto;
+  opacity: 0;
+  visibility: hidden;
+}

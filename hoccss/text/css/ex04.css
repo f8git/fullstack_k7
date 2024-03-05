@@ -1,0 +1,29 @@
+/*
+1.text-decoration: none | underline | line-through | overline
+ 2.text-transform : none | uppercase | lowecase | capotalize
+3. letter-spacing: khoang cach cac ky tu
+4. word-spacing: khoang cach cac tu
+5. text-indent: lui vao ky tu dau tien
+ */
+
+p {
+  /* text-decoration: overline line-through underline; */
+  /* text-transform: capitalize; */
+  /* letter-spacing: 5px; */
+  /* word-spacing: 5px;
+  text-indent: 50px; */
+  /* word-wrap: break-word; */
+  word-break: break-all;
+}
+
+.content {
+  /* text-align: justify; */
+}
+
+.wrap-span {
+  text-align: center;
+}
+
+.image {
+  font-size: 0;
+}

@@ -1,0 +1,28 @@
+/* 
+font-size: Thay doi co chu
+Cu phap: font-size: value + unit
+- px: 
+- em: 
+- rem:
+
+luu y: font-size la thuoc tinh ke thua
+*/
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+}
+
+/* .content {
+  font-size: 1.5em;
+}
+
+.content p {
+  font-size: 2em;
+} */
+
+.content h2 {
+}

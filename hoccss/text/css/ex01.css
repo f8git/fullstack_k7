@@ -1,0 +1,55 @@
+/* Gia tri ke thua
+- inital --> ke thua gia tri mac dinh cua trinh duyet
+- inherit --> ke thua tu thanh phan cha
+
+Cac don vi hay dung
+1. Don vi tuyet doi
+- px(pixel)
+- pt(point) = 1.3 * px
+
+2. Don vi tuong doi
+- em: ti le voi thanh phan cha
+- rem: ti le voi mac dinh trinh duyet
+- %: ti le voi thanh phan cha
+- vw(viewport width): ti le voi chieu rong khung nhin
+- vh(viewport height): ti le voi chieu cao khung nhin
+
+Thuoc tinh color: Thay doi mau van ban
+Cu phap: color: value
+- Ten mau tieng anh
+- Ma mau hexa
+- Ma mau rgb
+- Ma mau hsl
+...
+
+Thuoc tinh opacity: Do trong suot
+
+Gia tri: transparent: trong suot
+
+luu y: color la thuoc tinh ke thua
+*/
+
+/* .title {
+  color: rgb(39, 144, 146);
+}
+
+.sub-title {
+  color: transparent;
+} */
+
+.content {
+  color: red;
+}
+
+.content .title {
+  color: rgb(0, 102, 128);
+  border: 1px solid currentColor;
+}
+
+.content .title:hover {
+  color: inherit;
+}
+
+.content .sub-title:hover {
+  color: initial;
+}
