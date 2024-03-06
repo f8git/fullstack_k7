@@ -64,6 +64,11 @@ form .text-form p {
   width: 22px;
 }
 
+textarea {
+  outline: none;
+  border: solid 1px;
+}
+
 .item label:hover {
   background-color: #333333;
   color: white;
@@ -132,9 +137,36 @@ form .text-form p {
   opacity: 1;
   visibility: visible;
 }
+
+/* .item:has(input:focus) p {
+  display: block;
+} */
+
+.item:has(input:focus) label {
+  background-color: #333333;
+  color: white;
+  border: solid 1px #333333;
+}
+
+.item:has(input:focus) input {
+  border: solid 1px #333333;
+}
+
 .item:has(textarea:focus) .icon-end i + i {
   opacity: 1;
   visibility: visible;
+}
+
+.item:has(textarea:focus) {
+  border: solid 1px #333333;
+}
+/* .item:has(textarea:focus) p {
+  display: block;
+} */
+.item:has(textarea:focus) label {
+  background-color: #333333;
+  color: white;
+  border: solid 1px #333333;
 }
 
 .item p {
@@ -228,7 +260,8 @@ form .text-form p {
   border: none;
 }
 .footer-checkbox {
-  display: inline-block;
+  position: relative;
+  /* display: inline-block; */
   line-height: 25.5px;
 }
 
@@ -242,31 +275,52 @@ form .text-form p {
 }
 
 .footer-checkbox label {
-  margin-left: 5px;
+  /* margin-left: 5px; */
   color: #727070;
 }
 
-.footer-checkbox span {
-  position: relative;
+.footer-checkbox label::before {
+  /* display: inline-block;
+  position: relative; */
+  content: "";
+  /* width: 9px;
+  height: 7px; */
+  /* position: absolute; */
   border: solid 2px #dddddd;
   padding: 1px 7px;
+  margin-right: 8px;
+  /* z-index: 2; */
 }
 
-.footer-checkbox:focus i {
-  opacity: 1;
-  visibility: visible;
+.footer-checkbox input:checked + label::after {
+  position: absolute;
+  /* display: block; */
+  content: "";
+  width: 4px;
+  height: 8px;
+  left: 0;
+  top: 0;
+  margin-left: 6px;
+  margin-top: 6px;
+  border-width: 0 2px 2px 0;
+  border-color: #333333;
+  border-style: solid;
+  transform: rotate(45deg);
 }
 
 .footer-checkbox span i {
+  /* z-index: 1;
   position: absolute;
   width: auto;
-  top: 50%;
+  top: 7px;
+  left: 10px; */
+  /* top: 50%; */
   /* left: 50%; */
-  left: 50%;
+  /* left: 50%; */
   /* transform: translateY(-50%); */
   /* transform: translatex(50%); */
-  transform: translate(-50%, -50%);
-  padding: auto;
+  /* transform: translate(-50%, -50%); */
+  /* padding: auto;
   opacity: 0;
-  visibility: hidden;
+  visibility: hidden; */
 }
