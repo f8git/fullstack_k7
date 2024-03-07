@@ -1,0 +1,59 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+}
+
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: inherit;
+}
+
+html {
+  /* 
+          default browser ==>100% = 16px
+          font-size: 100%; 
+          font-size: 1rem; ==> 1rem = 16px
+        
+          ==> 62.5% = 10px
+            font-size: 62.5%;
+            fonts-size: 1.6rem; ==> 1.6rem = 16px
+           */
+
+  /* HACK */
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+}
+
+.grid {
+  width: 1200px;
+  max-width: 100%;
+  /* can giua khoi */
+  margin: 0 auto;
+}
+
+.grid__full-width {
+  width: 100%;
+}
+
+.grid__row {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.grid__row-1 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid__col_3 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 25%;
+}

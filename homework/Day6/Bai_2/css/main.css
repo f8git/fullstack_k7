@@ -1,0 +1,98 @@
+body {
+  background-color: #ebf5fe;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  color: #666666;
+}
+
+.grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+article {
+  padding: 20px;
+  line-height: 1.6rem;
+  color: #363336;
+  border: solid 2px white;
+  background: white;
+  box-shadow: 0px 0px 20px 2px #b7d0e6;
+}
+
+article:hover {
+  border: solid 2px #e75049;
+  border-radius: 8px;
+}
+
+.article-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  float: left;
+}
+
+.article-icon.icon-1 {
+  box-shadow: 0px 0px 20px 0px #e8c4bb;
+  background: linear-gradient(90deg, #e4597d, #e3765b);
+}
+.article-icon.icon-2 {
+  box-shadow: 0px 0px 20px 0px #b6d5c2;
+  background: linear-gradient(90deg, #4da3a4, #71c491);
+}
+.article-icon.icon-3 {
+  box-shadow: 0px 0px 20px 0px #f4e4c1;
+  background: linear-gradient(90deg, #e18631, #f4c24a);
+}
+.article-icon.icon-4 {
+  box-shadow: 0px 0px 20px 0px #bbcaf6;
+  background: linear-gradient(90deg, #2e69cc, #7192f6);
+}
+.article-icon.icon-5 {
+  box-shadow: 0px 0px 20px 0px #d8a8f0;
+  background: linear-gradient(90deg, #6f22cb, #bb5eea);
+}
+.article-icon.icon-6 {
+  box-shadow: 0px 0px 20px 0px #b7c9a1;
+  background: linear-gradient(90deg, #68882b, #9bc964);
+}
+
+.article-icon i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  float: left;
+  color: white;
+}
+
+h2 {
+  margin: 0;
+  padding-left: 55px;
+  line-height: 2rem;
+  font-weight: 900;
+}
+
+article p {
+  font-size: 1.1rem;
+  color: #838383;
+  font-weight: 500;
+}
+
+article a {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #376eec;
+  margin-top: 25px;
+}
+
+/* .article-icon.icon-4 i {
+  transform: rotate(-90deg);
+} */

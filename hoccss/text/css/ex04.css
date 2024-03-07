@@ -22,6 +22,7 @@ p {
 
 .wrap-span {
   text-align: center;
+  word-spacing: 0.2rem;
 }
 
 .image {

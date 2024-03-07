@@ -1,0 +1,230 @@
+* {
+  /* margin: 0;
+  padding: 0;
+  box-sizing: border-box; */
+}
+
+body {
+  /* width: 100vw;
+  height: 100vh; */
+}
+
+h1 {
+  margin: 0;
+}
+
+.grid {
+}
+.box {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg")
+    no-repeat 50% 100% / 100% auto;
+}
+
+.grid__row-1 {
+  position: relative;
+  border-radius: 10px;
+  word-wrap: break-word;
+  box-shadow: 0 0 10px 5px #e9e3e3;
+
+  /* position: absolute; */
+  /* height: 300px;
+  background-color: orange; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* height: 350px; */
+
+  /* background: white; */
+  display: flex;
+}
+
+.box_left,
+.box_right {
+  /* width: 100%; */
+  /* display: inline-block; */
+  /* float: left; */
+  text-align: center;
+  /* display: flex; */
+  align-items: center;
+  /* padding: 30px 0; */
+}
+
+.box_left {
+  background: #ff574d;
+  color: white;
+  width: 40%;
+  float: left;
+  padding: 50px 12px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.box_left h2 {
+  font-size: 2rem;
+}
+
+.logo h2::before {
+  content: "JL";
+  width: 30px;
+  height: 30px;
+  color: #ff574d;
+  background-color: white;
+  border-radius: 4px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.box_left p {
+  margin-top: 2rem;
+  word-spacing: 0.2rem;
+  line-height: 1.6rem;
+}
+
+.box_left ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.bo .box_left ul li {
+}
+.box_right {
+  float: left;
+  width: 60%;
+  padding: 28px 30px;
+  background: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.box_right h2 {
+  margin-bottom: 20px;
+  color: #272323;
+}
+
+.box_right h2 span {
+  color: #ff574d;
+  position: relative;
+}
+
+.box_right h2 span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 34px;
+  height: 1px;
+  background-color: #ff574d;
+  left: -2px;
+  bottom: -9px;
+}
+
+.box_right input.email,
+.box_right input.password {
+  padding: 10px 14px;
+  width: 100%;
+  margin: 8px 0px;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  /* border: solid 1px #717171;
+  border-radius: 3px; */
+  box-shadow: 0 0 2px 1px #dbd9d9;
+}
+
+.box_left a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px 20px;
+  background-color: white;
+  color: #ff574d;
+  border-radius: 2px;
+  font-weight: 500;
+  margin: 16px 0;
+}
+
+.icon-right {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  color: #ff574d;
+  top: 50%;
+  left: 38%;
+  box-shadow: 0 0 2px 0 #dbd1d1;
+}
+
+.list-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.list-icon li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  margin: 0 4px;
+  color: white;
+
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.084);
+}
+
+.box-remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.remember-check {
+  display: flex;
+  align-items: center;
+}
+
+.remember-check input {
+  width: auto;
+  border: none;
+}
+
+.remember-check label {
+  align-items: center;
+  margin-left: 4px;
+  color: #717171;
+}
+
+.forgot-pass {
+  display: inline-block;
+}
+.forgot-pass a {
+  text-decoration: none;
+  color: #717171;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  background-color: #ff574d;
+  outline: none;
+  border: none;
+  color: white;
+  letter-spacing: 0.1rem;
+}
+
+.box_right p {
+  margin-top: 16px;
+  color: #717171;
+}

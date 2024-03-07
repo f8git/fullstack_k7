@@ -1,0 +1,12 @@
+/* 
+Border: tao duong vien cho the html
+- border-width
+- border-style: solid | dotted | dashed | double | none
+- border color
+*/
+
+.box {
+  border-width: 5px;
+  border-style: solid;
+  /* border-color: red; */
+}

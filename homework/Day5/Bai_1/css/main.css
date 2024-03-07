@@ -132,6 +132,9 @@ textarea {
   opacity: 0;
   visibility: hidden;
 }
+.item:has(select:focus) .icon-end i {
+  border: solid 1px #333333;
+}
 
 .item:has(input:focus) .icon-end i + i {
   opacity: 1;

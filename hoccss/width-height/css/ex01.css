@@ -1,0 +1,31 @@
+/* 
+width: thiet lap chieu rong
+height: thiet lap chieu cao
+- neu dung % ti le kich thuoc voi cha
+- width, height chi hoat dong voi the block
+
+Don vi vw, vh ti le theo kich thuoc cua phan nhin thay khong phu thuoc boi thanh phan cha
+- vw ti le voi width cua viewport(nguoi dung nhin thay)
+- vh ti le voi height cua viewport(nguoi dung nhin thay)
+
+Tim hieu: 
+- Tai sao the img la inline lai set duoc width height ?
+- max-width
+- max-height
+- min-width
+- min-height
+
+Trong the inline co 2 nhom:
+- non-replace
+- replace
+*/
+
+body {
+  height: 2000px;
+  width: 1000px;
+}
+.box {
+  background: green;
+  width: 200px;
+  height: 100vh;
+}
