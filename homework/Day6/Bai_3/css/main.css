@@ -22,8 +22,7 @@ h1 {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background: url("http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg")
-    no-repeat 50% 100% / 100% auto;
+  background: url("../background/login-bg2.jpg") no-repeat 50% 100% / 100% auto;
 }
 
 .grid__row-1 {
