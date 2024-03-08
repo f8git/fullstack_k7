@@ -1,28 +1,15 @@
-* {
-  /* margin: 0;
-  padding: 0;
-  box-sizing: border-box; */
-}
-
-body {
-  /* width: 100vw;
-  height: 100vh; */
-}
-
 h1 {
   margin: 0;
 }
 
-.grid {
-}
 .box {
-  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background: url("../background/login-bg2.jpg") no-repeat 50% 100% / 100% auto;
+  background: url("http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg")
+    no-repeat 50% 100% / 100% auto;
 }
 
 .grid__row-1 {
@@ -30,28 +17,14 @@ h1 {
   border-radius: 10px;
   word-wrap: break-word;
   box-shadow: 0 0 10px 5px #e9e3e3;
-
-  /* position: absolute; */
-  /* height: 300px;
-  background-color: orange; */
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-  /* height: 350px; */
-
-  /* background: white; */
   display: flex;
 }
 
 .box_left,
 .box_right {
-  /* width: 100%; */
-  /* display: inline-block; */
-  /* float: left; */
   text-align: center;
-  /* display: flex; */
+
   align-items: center;
-  /* padding: 30px 0; */
 }
 
 .box_left {
@@ -91,8 +64,6 @@ h1 {
   padding: 0;
 }
 
-.bo .box_left ul li {
-}
 .box_right {
   float: left;
   width: 60%;
@@ -131,8 +102,7 @@ h1 {
   font-size: 1.2rem;
   border: none;
   outline: none;
-  /* border: solid 1px #717171;
-  border-radius: 3px; */
+
   box-shadow: 0 0 2px 1px #dbd9d9;
 }
 
@@ -195,13 +165,48 @@ h1 {
 
 .remember-check input {
   width: auto;
-  border: none;
+  border: solid 1px #dbd1d1;
+  box-shadow: 0 0 2px 1px #dbd9d9;
 }
 
 .remember-check label {
+  position: relative;
   align-items: center;
-  margin-left: 4px;
+  margin-left: 19px;
   color: #717171;
+}
+
+.remember-check label::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: solid 1px #dbd1d1;
+  border-radius: 3px;
+  left: -19px;
+  top: -2px;
+  box-shadow: 0 0 2px 1px #dbd9d9;
+}
+
+.remember-check label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 4px;
+  border-bottom: solid 2px #717171;
+  border-right: solid 2px #717171;
+  transform: rotate(45deg);
+  left: -14px;
+  top: 1px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.remember-check:has(input:checked) label::before {
+  opacity: 1;
+  visibility: visible;
 }
 
 .forgot-pass {
