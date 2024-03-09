@@ -1,0 +1,6 @@
+.banner {
+  width: 100vw;
+  height: 100vh;
+  background: url("../Background/ha-noi-melody-residences-cover.jpg") no-repeat
+    0 50% / contain;
+}

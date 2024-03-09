@@ -101,6 +101,7 @@ h1 {
   font-size: 1.2rem;
   border: none;
   outline: none;
+  border-radius: 3px;
 
   box-shadow: 0 0 2px 1px #dbd9d9;
 }
@@ -221,6 +222,7 @@ button {
   width: 100%;
   padding: 8px 0;
   background-color: #ff574d;
+  border-radius: 3px;
   outline: none;
   border: none;
   color: white;
