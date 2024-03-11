@@ -8,18 +8,19 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  /* border: none; */
 }
 
 html {
   /* 
-                default browser ==>100% = 16px
-                font-size: 100%; 
-                font-size: 1rem; ==> 1rem = 16px
-              
-                ==> 62.5% = 10px
-                  font-size: 62.5%;
-                  fonts-size: 1.6rem; ==> 1.6rem = 16px
-                 */
+                    default browser ==>100% = 16px
+                    font-size: 100%; 
+                    font-size: 1rem; ==> 1rem = 16px
+                  
+                    ==> 62.5% = 10px
+                      font-size: 62.5%;
+                      fonts-size: 1.6rem; ==> 1.6rem = 16px
+                     */
 
   /* HACK */
   font-size: 62.5%;
@@ -49,7 +50,7 @@ html {
   margin-left: -12px;
   margin-right: -12px;
   /* margin-top: -12px;
-      margin-bottom: -12px; */
+          margin-bottom: -12px; */
 }
 
 .grid__row-1 {
@@ -69,4 +70,5 @@ html {
   padding-top: 12px;
   padding-bottom: 12px;
   width: 33.33333%;
+  /* max-height: 220px; */
 }

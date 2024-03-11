@@ -1,6 +1,48 @@
+@font-face {
+  font-family: SFU;
+  src: url("../fonts/SFUTradeGothic-BoldCondensedTwenty.woff2");
+}
+
 .banner {
+  display: flex;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   background: url("../Background/ha-noi-melody-residences-cover.jpg") no-repeat
     0 50% / contain;
+  color: #3f3424;
+}
+
+.banner-content {
+  position: relative;
+  width: 40rem;
+  padding: 2.4rem 1.6rem 4rem 1.6rem;
+  background: rgba(255, 255, 255, 0.801);
+  margin-left: 20%;
+  border-radius: 3px;
+}
+
+h2 {
+  font-size: 2.4rem;
+  color: #bf4240;
+}
+
+p {
+  margin: 1rem 0;
+  line-height: 1.6rem;
+}
+
+.banner-content::after {
+  position: absolute;
+  content: "3,2 TỶ/CĂN";
+  display: block;
+  background-color: #bf4240;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  transform: translateY(60%);
+  right: 2.2rem;
+  color: white;
+  border-radius: 3px;
+  font-family: SFU;
 }

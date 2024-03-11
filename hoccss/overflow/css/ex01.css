@@ -1,0 +1,32 @@
+/* 
+overflow: 
+- visible --> hien thi noi dung bi tran(mac dinh)
+- hidden --> an noi dung bi tran
+- scroll  --> an va hien thi thanh cuon (luc nao cx hien thi)
+- auto --> an va hien thi thanh cuon (chi hien thi thanh cuon khi noi dung bi tran)
+
+
+overflow-X
+overflow-Y
+*/
+
+.box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  /* overflow: hidden; */
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.box p {
+  width: 400px;
+}
+
+.box::-webkit-scrollbar-track {
+  background-color: aqua;
+}
+
+.box::-webkit-scrollbar-track {
+  background: green;
+}

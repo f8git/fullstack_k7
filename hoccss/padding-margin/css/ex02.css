@@ -1,0 +1,47 @@
+/* 
+Truong hop 1: 
+- 2 gia tri duong --> lay gia tri lon hon
+- 2 gia tri am --> lay gia tri nho hon
+--> Cung dau: lay tri tuyet doi gia tri lon hon
+- 1 gia tri am, 1 gia tri duong --> Cong 2 gia tri
+--> Trai dau: cong lai
+
+Truong hop 2 margin phan tu con se khong tu dong day phan tu cha-->cach giai quyet: 
+- border
+- display: inline-block | flex | inline-flex | grid
+- possition: absolute | fix
+- float: left | right
+*/
+
+/* h2 {
+  border: 1px solid red;
+  margin: 0;
+}
+
+.title-1 {
+  margin-bottom: -10px;
+}
+
+.title-2 {
+  margin-top: -20px;
+} */
+
+.box {
+  background: green;
+  color: #fff;
+  /* border: 1px solid red; */
+  /* display: flex; */
+  /* position: absolute; */
+  /* float: left; */
+  width: 300px;
+  /* padding: 0 30px; */
+  padding-inline: 30px;
+  padding-block: 30px;
+  margin-inline: auto;
+  text-align: center;
+}
+.box h2 {
+  /* margin: 50px 0; */
+  /* display: inline-block; */
+  margin-inline: auto;
+}

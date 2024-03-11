@@ -1,0 +1,112 @@
+body {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.profile-banner {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  background: url("../icon/banner.jpg") no-repeat 100% 50% / 100% auto;
+}
+
+.overlay-banner {
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  background-color: #00000035;
+}
+
+.box-content {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+}
+
+.logo {
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
+  width: 150px;
+}
+
+.text-content {
+  color: white;
+  margin-left: 15px;
+}
+
+.text-content p {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: x-small;
+}
+
+.text-content p,
+.text-content h2 {
+  margin-top: 25px;
+}
+
+.text-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.text-content p span {
+  font-size: 1.7rem;
+}
+
+ul {
+  width: 100vw;
+  text-align: right;
+  padding-right: 40px;
+}
+
+ul::after {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 3px;
+  background-color: #e4e2e0;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li a {
+  color: #4d4538;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 15px 10px 0px;
+  /* padding: 20px 0; */
+}
+
+ul li a::after {
+  content: "";
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+  height: 3px;
+  opacity: 0;
+}
+
+ul li:hover a::after {
+  opacity: 1;
+  background-color: orangered;
+}
+
+li:hover a {
+  color: orangered;
+}

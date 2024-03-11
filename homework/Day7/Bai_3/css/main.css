@@ -1,0 +1,109 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f1ef;
+}
+
+h2 {
+  padding-top: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+h2::after {
+  position: absolute;
+  content: "";
+  width: 70%;
+  right: 0;
+  height: 2px;
+  background-color: #e5e5e5;
+}
+
+section {
+  background-color: #f4f1ef;
+}
+
+ul {
+  list-style: none;
+  padding: 16px 0 12px;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li label {
+  background: #af7c38;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 14px;
+
+  border-radius: 50px;
+  background-color: #e5e5e5;
+}
+
+ul li:has(input:checked) label {
+  background-color: #af7c38;
+}
+
+ul li:has(input:hover) label {
+  cursor: pointer;
+}
+
+ul li label {
+  text-decoration: none;
+  font-size: x-small;
+  font-style: italic;
+  color: #382d22;
+}
+
+ul li input:checked + label {
+  color: white;
+}
+
+ul li label span {
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.article-addr {
+  position: relative;
+}
+
+.article-addr img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  background-color: #0000006b;
+}
+
+.article-addr .article-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 10px;
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-color: #00000036;
+}
+.article-addr .article-text h3 {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  font-size: x-large;
+}
+
+.article-addr .article-text p {
+  position: absolute;
+  bottom: 25px;
+  left: 15px;
+  font-size: medium;
+}

@@ -1,0 +1,45 @@
+/* 
+Thuoc tinh display: Thay doi che do hien thi cua 1 the html
+- none --> an
+- block --> hien thi duoi dang block
+- inline --> hien thi duoi dang inline
+- inline-block: ket hop inline va block
+
+
+Luu y: Thuoc tinh display co rat nhieu gia tri phuc tap
+- flex, inline-flex
+- grid, inline-grid
+- table
+- list-item
+- table-cell
+
+
+Thuoc tinh visibility : an/hien thanh phan html(giu khong gian mat tac dung)
+
+Thuoc tinh opacity: Trong suot 1 the html theo ti le: 0->1(giu khong gian nhung van con giu the)
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+.title {
+  display: inline-block;
+  border: 1px solid red;
+  padding: 10px 20px;
+}
+
+.title:hover {
+  /* display: none; */
+
+  /* visibility: hidden; */
+  opacity: 0;
+}
+
+/* 
+float
+position
+*/
