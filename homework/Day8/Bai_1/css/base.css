@@ -1,0 +1,83 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 
+                  default browser ==>100% = 16px
+                  font-size: 100%; 
+                  font-size: 1rem; ==> 1rem = 16px
+                
+                  ==> 62.5% = 10px
+                    font-size: 62.5%;
+                    fonts-size: 1.6rem; ==> 1.6rem = 16px
+                   */
+
+  /* HACK */
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  /* font-family: "Lato", sans-serif; */
+  /* font-family: "Open Sans", sans-serif; */
+  /* font-family: "Roboto", sans-serif; */
+  /* font-family: "Asap", sans-serif; */
+  font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.grid {
+  width: 1300px;
+  max-width: 100%;
+  /* can giua khoi */
+  margin: 0 auto;
+}
+
+.grid__full-width {
+  width: 100%;
+}
+
+.grid__row {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+  /* margin-top: -12px;
+        margin-bottom: -12px; */
+}
+
+.grid__row-1 {
+  width: 45%;
+  margin: 0 auto;
+}
+
+.grid__col_3 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 25%;
+}
+
+.grid__col_4 {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 33.33333%;
+}

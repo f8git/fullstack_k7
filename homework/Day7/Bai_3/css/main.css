@@ -42,7 +42,7 @@ ul li label {
   text-align: center;
   display: inline-block;
   margin-right: 14px;
-
+  line-height: 1.6rem;
   border-radius: 50px;
   background-color: #e5e5e5;
 }

@@ -1,0 +1,174 @@
+body {
+  background: url("../background/family-friendly-resorts-in-the-GCC.jpg")
+    no-repeat 50% 0% / cover;
+}
+
+ul {
+  font-weight: 700;
+  font-size: small;
+  color: #41495a;
+  list-style: none;
+}
+
+a {
+  color: #41495a;
+  text-decoration: none;
+  line-height: 3rem;
+}
+
+h3 {
+  color: #41495a;
+  line-height: 3.6rem;
+  text-transform: uppercase;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #41495a;
+}
+
+.logo {
+  font-size: x-large;
+  font-weight: 900;
+}
+.menu ul {
+  display: flex;
+}
+
+.menu > ul > li {
+  display: inline-block;
+  padding: 20px 20px;
+}
+
+.menu > ul > li > a {
+  font-size: larger;
+}
+
+.mega-menu > a::after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-bottom: 2px solid #41495a;
+  border-right: 2px solid #41495a;
+  margin-left: 6px;
+  transform: rotate(45deg) translateY(-50%);
+}
+
+.mega-menu .mega-menu-content {
+  position: absolute;
+  visibility: hidden;
+  background-color: white;
+  display: flex;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  top: 100%;
+}
+
+.mega-menu:hover .mega-menu-content {
+  visibility: visible;
+  animation: fadeIn ease-in-out 0.4s;
+}
+
+.mega-menu:hover {
+  cursor: pointer;
+  color: #41495ab1;
+}
+
+a:hover {
+  color: #41495ab1;
+}
+
+.mega-menu:hover > a {
+  color: #41495ab1;
+}
+
+.mega-menu:hover > a::after {
+  border-bottom: 2px solid #41495ab1;
+  border-right: 2px solid #41495ab1;
+}
+
+.__col {
+  display: flex;
+  flex-direction: column;
+}
+
+.document-first {
+  flex: 1;
+  flex-direction: column;
+}
+
+.document-usage {
+  flex: 1;
+}
+
+.document-usage-content,
+.document-styleguide-content,
+.document-elements-contents {
+  display: flex;
+  flex: 1;
+}
+
+.document-usage-one,
+.document-usage-two,
+.document-styleguide-one,
+.document-styleguide-two {
+  flex: 1;
+}
+.document-styleguide {
+  flex: 1;
+  padding-top: 20px;
+}
+
+.document-second {
+  position: relative;
+  flex: 2;
+}
+
+.document-second::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 95%;
+  width: 1px;
+  background-color: #41495a15;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.document-elements-one,
+.document-elements-two,
+.document-elements-three {
+  flex: 1;
+}
+
+.menu > ul > li:nth-child(7) {
+  display: flex;
+  align-items: center;
+}
+
+.menu > ul > li:nth-child(7) a {
+  display: inline-block;
+  display: flex;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: solid 2px #41495a;
+}
+
+.menu > ul > li:nth-child(7) a:hover {
+  border: solid 2px #41495ab1;
+}
+.menu > ul > li:nth-child(7) a i {
+  font-size: 1rem;
+  margin: auto;
+}
+.menu > ul > li:last-child {
+  padding: 20px 0;
+}
