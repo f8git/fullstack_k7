@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 300px;
+  border: 1px solid red;
+  margin: 30px auto;
+}
+
+.box ul {
+  /* list-style-position: inside;
+  list-style-type: upper-roman; */
+  list-style: inside upper-roman;
+}
+
+/* 
+list-style-position : inside | outside
+list-style-type: kieu danh sach
+- none --> khong o dinh dang danh sach
+- disc --> Mac dinh cua ul
+- circle --> dau cham tron rong
+- square --> hinh vuong dac
+- decimal --> sap xep dang so
+- decimal-leading-zero --> so 0 truoc dang so
+- lower-alpha
+- lower-roman
+- upper-alpha
+- upper-roman
+- 
+
+
+list-style-image: thay bieu tuong bang anh --> khong khuyen khich su dung vi khong tuy chinh kich thuoc anh 
+--> nen thay the bang background ket hop before
+
+list-style: position
+
+*/

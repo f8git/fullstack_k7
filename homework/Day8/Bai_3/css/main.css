@@ -1,0 +1,56 @@
+.grid {
+  text-align: center;
+  padding: 10px 0px;
+  align-items: stretch;
+}
+
+h2,
+.grid > p {
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+article {
+  position: relative;
+  text-align: center;
+  padding: 20px 20px 70px;
+  /* background-color: aquamarine; */
+  height: 100%;
+}
+
+article h3,
+article p,
+article a {
+  margin-top: 20px;
+}
+
+article h3 {
+  font-size: 2rem;
+}
+
+article p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #9f9595;
+}
+
+article a {
+  position: absolute;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: white;
+  bottom: 20px;
+
+  transform: translateX(-50%);
+  background-color: #29378d;
+}
+
+article a:hover {
+  opacity: 0.8;
+}

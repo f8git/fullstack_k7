@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+  margin: 30px auto;
+  position: relative;
+}
+
+.box .item {
+  background: green;
+  color: #fff;
+  margin: 10px;
+  padding: 10px;
+  width: 100px;
+}
+
+.item:nth-child(2) {
+  background: blueviolet;
+  width: auto;
+  /* position: relative;
+  top: 20px; */
+  /* left: calc(100% - 100px - 10px); */
+  /* left: 20px; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: #0000006c;
+}
+/* 
+Thuoc tinh position: can chinh vi tri cac element trong trang web
+- static: mac dinh
+- relative: vi tri tuong doi voi vi tri ban dau
+- absolute: vi tri tuyet doi
+- fixed: vi tri co dinh khi keo thanh cuon(scrolling)
+
+Thuoc tinh khi su dung voi position(tru static)
+- top
+- left
+- right
+- bottom
+- z-index: vi tri theo truc z
+- inset: tong hop cua top, left, right, bottom
+*/
