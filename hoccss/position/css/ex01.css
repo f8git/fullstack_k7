@@ -12,33 +12,49 @@
   position: relative;
 }
 
-.box .item {
+/* .box .item {
   background: green;
   color: #fff;
   margin: 10px;
   padding: 10px;
   width: 100px;
+} */
+
+.item:nth-child(1) {
+  background-color: aqua;
 }
 
 .item:nth-child(2) {
   background: blueviolet;
-  width: auto;
-  /* position: relative;
-  top: 20px; */
+  /* width: auto; */
+  position: relative;
+  top: 10px;
+  z-index: 1;
   /* left: calc(100% - 100px - 10px); */
   /* left: 20px; */
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  top: 0;
+  top: 0; */
 }
 
-.overlay {
+.item:nth-child(3) {
+  background-color: rgb(68, 0, 255);
+  position: relative;
+}
+.item:nth-child(3) {
+  background-color: rgb(195, 255, 0);
+}
+.item:nth-child(4) {
+  background-color: rgb(255, 0, 0);
+}
+
+/* .overlay {
   position: absolute;
   inset: 0;
   background: #0000006c;
-}
+} */
 /* 
 Thuoc tinh position: can chinh vi tri cac element trong trang web
 - static: mac dinh

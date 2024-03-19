@@ -1,0 +1,101 @@
+body {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.grid {
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 4rem;
+  color: #363f50;
+}
+
+p {
+  font-size: 1.6rem;
+  margin: 20px 0 40px;
+  color: #777;
+}
+
+.row {
+  justify-content: space-between;
+  display: flex;
+}
+
+.col {
+  position: relative;
+  flex: 1;
+  font-size: 1.6rem;
+  margin: 10px 10px;
+}
+
+.col input,
+.col select,
+.col textarea {
+  width: 100%;
+  padding: 30px 15px 8px;
+  border-radius: 8px;
+  border: 2px solid #e7e4e4;
+  outline: none;
+  box-shadow: 0 0 10px 1px #e7e4e4;
+}
+
+.col select {
+  color: #777;
+  width: 100%;
+  padding: 19px 15px;
+  border-radius: 8px;
+  border: 2px solid #e7e4e4;
+  outline: none;
+  box-shadow: 0 0 10px 1px #e7e4e4;
+}
+
+.col textarea {
+}
+
+.col button {
+  display: inline-block;
+  padding: 15px 25px;
+  outline: none;
+  border-radius: 35px;
+  background: #4d77d8;
+  color: white;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.placeholder {
+  color: #777;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s ease-in-out;
+}
+
+.col textarea + .placeholder {
+  top: 25px;
+}
+
+textarea:focus + .placeholder,
+textarea:valid + .placeholder {
+  top: 20px;
+  font-size: 1.3rem;
+}
+
+input:focus + .placeholder,
+input:valid + .placeholder {
+  top: 20px;
+  font-size: 1.3rem;
+  /* transform: scale(0.9); */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border: solid 2px #cec0f1;
+}

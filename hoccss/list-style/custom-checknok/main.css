@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.checkbox {
+  width: 300px;
+  margin: 300px auto;
+}
+
+label {
+  position: relative;
+  display: block;
+  padding: 5px 0;
+}
+
+span {
+  user-select: none;
+}
+
+span::before {
+  float: left;
+  /* position: absolute; */
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  border: solid 2px blue;
+}
+input:checked + span::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 3px;
+  height: 6px;
+  border-bottom: 2px solid blue;
+  border-right: 2px solid blue;
+  transform: rotate(45deg);
+  top: 9px;
+  left: 7px;
+}

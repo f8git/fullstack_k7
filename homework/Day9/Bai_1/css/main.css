@@ -1,0 +1,152 @@
+.dev-history-row {
+  padding-left: 36px;
+  padding-right: 36px;
+  flex: 1;
+}
+
+h2 {
+  color: black;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.dev-history {
+  position: relative;
+  display: flex;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.dev-history::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(0, #387e72, #65c8b9);
+  box-shadow: 0 0 0px 8px #08636319;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dev-history .dev-history-event {
+  position: relative;
+  left: 0;
+  text-align: right;
+  transition: all 0.5s ease-out;
+}
+
+.dev-history .dev-history-phase {
+  position: relative;
+  right: 0;
+  text-align: left;
+  transition: all 0.5s ease-in;
+}
+
+.dev-history:hover .dev-history-event {
+  left: 50%;
+  text-align: left;
+}
+
+.dev-history:hover .dev-history-phase {
+  right: 50%;
+  text-align: right;
+}
+
+.dev-history::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1px;
+  height: 85%;
+  right: 50%;
+  top: 38%;
+  background-color: rgba(0, 0, 0, 0.275);
+}
+
+.dev-history:last-child:after {
+  display: none;
+}
+
+.dev-history-event p {
+  margin: 10px 0;
+  line-height: 1.8rem;
+}
+
+.dev-history .dev-history-event a {
+  color: #808084;
+  text-decoration: none;
+  padding: 5px 16px;
+  background-color: rgba(0, 0, 0, 0.044);
+  border-radius: 16px;
+  font-weight: bold;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.dev-history:hover .dev-history-event a {
+  background-color: #a26f5a;
+  color: white;
+}
+
+.grid__col-6.box-right {
+  display: flex;
+  flex-direction: row;
+}
+
+.history-image {
+  position: relative;
+  z-index: -3;
+  right: 10%;
+  order: 2;
+}
+
+.history-image-before-image {
+  background: url(../img/process-bg.webp) no-repeat 50% 50% / cover;
+  position: relative;
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 40px;
+  padding: 255px 86px 75px 80px;
+  margin-top: 100px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 230px;
+  height: 370px;
+  top: 80px;
+  left: 50px;
+}
+
+.history-image-before-image::before {
+  position: absolute;
+  content: "";
+  z-index: -2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: inherit;
+}
+
+.history-image-before-image::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  left: 10px;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  background-color: #445cb0;
+}
+
+.history-image-before-text {
+  position: relative;
+  bottom: -20px;
+  left: 165px;
+  z-index: 1;
+  color: white;
+}

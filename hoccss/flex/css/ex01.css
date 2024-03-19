@@ -1,0 +1,56 @@
+/*
+flex = flexible box module
+- Ky thuat chia layout linh hoat
+- Truc: Main va cross
+- Thanh phan: flex container va flex item 
+
+
+1. Cac thuoc tinh trong nhom flex container
+- display: flex --> kich hoat flex
+- flex-direction: chon huong cho chuc chinh
++ row: --> mac dinh
++ colomn
++ row-reverse
++ colomn-reverse
+- justify-content: can chinh cac item theo huong song song truc chinh
++ flex-start
++ flex-end
++ center
++ space-between
++ space-around
++ space-evenly
++ start --> ve tim hieu
++ end --> ve tim hieu
+- align-items: can chinh item theo huong vuong goc truc chinh
++ stretch
++ flex-start
++ center
++ flex-end
++ baseline
+
+
+Ve nha: 
+- so sanh  align-content va align-item
+- flex-wrap
+- gap
+- row-gap
+- colmn-gap
+ */
+
+.box {
+  width: 400px;
+  height: 300px;
+  border: 1px solid red;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.item {
+  background: green;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #fff;
+}

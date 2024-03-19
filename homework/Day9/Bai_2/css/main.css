@@ -1,0 +1,138 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  width: 60%;
+}
+
+article {
+  position: relative;
+  line-height: 2em;
+  border: 1px solid #a2705a;
+  padding: 30px;
+  /* opacity: 0; */
+  background: url("../background/work\ from\ 1.jpeg") no-repeat 50% 50% / cover;
+}
+article:hover > i {
+  transform: scale(0);
+}
+
+article::after {
+  top: 0;
+  left: 0;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: background-color 0.5s ease-in;
+  z-index: 0;
+}
+
+article:hover::after {
+  background-color: #a2705ae9;
+}
+
+article::before {
+  top: 0;
+  left: 0;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  transition: transform 0.5s ease-in;
+  /* background: white; */
+  z-index: 1;
+}
+
+article:hover::before {
+  border-color: rgba(231, 203, 167, 0.438);
+  transform: scale(0.9);
+  /* background-color: transparent; */
+}
+
+.grid__col_4 {
+}
+
+article > i {
+  position: relative;
+  color: #a26f5a;
+  font-size: xxx-large;
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+}
+
+article h2 {
+  position: relative;
+  bottom: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.8rem;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+article p {
+  position: relative;
+  bottom: 0;
+  font-size: 1.2rem;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+article a {
+  text-decoration: none;
+  color: white;
+}
+
+article .learn-more {
+  /* display: none; */
+  position: absolute;
+  bottom: 0px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+article .learn-more span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+}
+
+article .learn-more i {
+  margin-left: 10px;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  border: solid 1px white;
+  background-color: #a26f5a;
+  border-radius: 50%;
+}
+
+article .learn-more i:hover {
+  background-color: white;
+  color: #a26f5a;
+  cursor: pointer;
+}
+
+article:hover h2,
+article:hover p {
+  bottom: 70px;
+}
+
+article:hover {
+  /* position: relative; */
+  color: white;
+}
+
+article:hover .learn-more {
+  opacity: 1;
+  bottom: 25px;
+}
