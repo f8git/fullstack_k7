@@ -1,0 +1,41 @@
+/* 
+Transition: Nhom cac thuoc tinh thiet lap thoi gian chuyen dong cua cac thuoc tinh css
+
+transition-property: none | all | ten-thuoc-tinh
+transition-duration: value + unit (s, ms)
+transition-delay: value + unit(s, ms)
+transition-timing-function: quy dinh toc do qua moi giai doan chuyen dong
++ ease --> cham - nhanh - cham
++linear --> toc do deu
++ ease-in --> cham - nhanh 
++ ease-out --> nhanh - cham
++ ease-in-out --> cham - nhanh - cham
++ cubic-bezier(p1, p2, p3, p4)
+
+
+Luu y: Thuoc tinh transition chi tac dung voi cac thuoc tinh co gia tri la so
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  padding: 20px;
+  border: solid 1px red;
+  margin-top: 30px;
+}
+
+.box h2 {
+  transition-property: padding-left;
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(0, 0.98, 0.97, -0.01);
+  /* transition-delay: 1s; */
+}
+
+.box:hover h2 {
+  /* padding-top: 100px; */
+  padding-left: 100px;
+}

@@ -27,15 +27,29 @@ flex = flexible box module
 + center
 + flex-end
 + baseline
+- gap: tao khoang cach giua cac items
++ row-gap
++ column-gap
+
+2. Cac thuoc tinh trong nhom flex item
+flex-grow: lap dau khoang cach con thua cua flex container(mac dinh la 0)
+
+flex-shrink
+flex-basis: bi chan moi min-width, max-width khi flex-direction la row
+va min-height, max-height khi flex-direction la column
+
+flex: grow shrink basis
+
+align-self: can chinh 1 item theo truc cross, cac gia tri giong align-item
 
 
-Ve nha: 
-- so sanh  align-content va align-item
-- flex-wrap
-- gap
-- row-gap
-- colmn-gap
  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 .box {
   width: 400px;
@@ -44,8 +58,12 @@ Ve nha:
   margin: 30px auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: flex-start;
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
+  /* gap: 10px 20px; */
+  /* row-gap: 10px; */
+  /* column-gap: 20px; */
 }
 
 .item {
@@ -53,4 +71,15 @@ Ve nha:
   color: #fff;
   padding: 10px;
   border: 1px solid #fff;
+  /* flex-grow: 1; */
+  /* flex-basis: 60px; */
+}
+
+.item:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+.item:nth-child(4) {
+  align-self: center;
 }

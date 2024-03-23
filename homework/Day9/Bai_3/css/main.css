@@ -44,6 +44,7 @@ p {
 }
 
 .col select {
+  position: relative;
   color: #777;
   width: 100%;
   padding: 19px 15px;
@@ -51,9 +52,25 @@ p {
   border: 2px solid #e7e4e4;
   outline: none;
   box-shadow: 0 0 10px 1px #e7e4e4;
+  appearance: none;
+}
+
+.row:nth-child(2) .col:last-child label:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-bottom: solid 2px #777;
+  border-right: solid 2px #777;
+  transform: rotate(45deg);
+  top: 40%;
+  right: 12px;
+  /* transform: translateY(-50%); */
 }
 
 .col textarea {
+  word-break: break-all;
 }
 
 .col button {

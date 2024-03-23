@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* 
+                    default browser ==>100% = 16px
+                    font-size: 100%; 
+                    font-size: 1rem; ==> 1rem = 16px
+                  
+                    ==> 62.5% = 10px
+                      font-size: 62.5%;
+                      fonts-size: 1.6rem; ==> 1.6rem = 16px
+                     */
+
+  /* HACK */
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  /* font-family: "Lato", sans-serif; */
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Roboto", sans-serif;
+  /* font-family: "Asap", sans-serif; */
+  box-sizing: border-box;
+}
