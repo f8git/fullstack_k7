@@ -1,0 +1,54 @@
+/* 
+Thuoc tinh transform: Bien doi hinh dang html
+- xoay
+- phong to/ thu nho
+- nghieng
+- di chuyen
+
+Cu phap: transform: value
+- rotate(angle)  --> Xoay 2D theo truc Z
+- rotateX(angle)  --> Xoay theo truc X
+- rotateY(angle)  --> Xoay theo truc Y
+- scale(x, y)  --> Phong to / thu nho theo ty le x, y
+- scaleX(value) --> phong to theo truc x
+- scaleY(value) --> phong to theo truc Y
+- skew(x, y) --> Nghieng theo goc x, y
+- skewX(value) --> Nghieng theo truc x
+- skewY(value) --> Nghieng theo truc y
+- translate(x, y) --> Di chuyen theo x, y
+- translateX(value) --> Di chuyen theo truc x
+- translateY(value) --> Di chuyen theo truc y
+
+Luu y: Neu don vi la % --> ti le voi kich thuoc chinh no
+
+Cac thuoc tinh bo sung
+- rotate --> tuong tu transform: rotate()
+- translate --> tuong tu transform: translate()
+- scale --> tuong tu transform: scale()
+
+
+Thuoc tinh transform-origin: value value thay doi vi tri truc
+
+*/
+
+.wrap {
+  border: solid 1px red;
+  padding: 30px;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  background: green;
+  margin: 30px auto;
+  transition: all 0.4s linear;
+  transform-origin: 0 0;
+}
+
+.wrap:hover .box {
+  /* transform: rotate(45deg); */
+  /* transform: skew(-30deg, 0); */
+  /* transform: translate(100%); */
+  /* translate: 100px 100px; */
+  scale: 1.5 1.5;
+}

@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+}
+
+body {
+  font-size: 1.6rem;
+  /* font-weight: 500; */
+  font-family: Roboto, sans-serif;
+  color: #4d4d4d;
+}
+
+a {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+svg {
+  width: 16px;
+  height: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.container-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33333%;
+  margin: 0 auto;
+}
+.col-5 {
+  width: 41.66667%;
+}
+.col-4 {
+  width: 33.33333%;
+  padding: 0px 20px;
+}
