@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+i {
+  color: #333;
+}
+
+/* header .box {
+  display: flex;
+  justify-content: center;
+} */
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 15px 15px;
+}
+
+.menu {
+  margin-left: auto;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+ul li {
+  padding: 10px 30px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact .btn {
+  padding: 10px 30px;
+  border-radius: 99px;
+  background-color: #75b7eb;
+  color: white;
+}
+
+.contact .btn a {
+  color: white;
+}
+
+.contact .bar {
+  display: none;
+  margin-inline: 10px;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 991.98px) {
+  body {
+    color: green;
+  }
+  .box {
+    margin: 0px 15px;
+  }
+  .menu {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 20px;
+    width: 300px;
+    height: 100%;
+    z-index: 1;
+    background-color: black;
+    transform: translateX(-100%);
+    transition: all 0.3s linear;
+  }
+  .contact .bar {
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+
+  :has(.box .contact .bar label input:checked) .menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .menu ul li a {
+    color: white;
+  }
+
+  .contact .bar label input + span {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    inset: 0;
+    transition: all 0.3s linear;
+  }
+
+  .contact .bar label input:checked + span {
+    opacity: 1;
+    visibility: visible;
+
+    background-color: rgba(0, 0, 0, 0.23);
+  }
+
+  nav .contact .bar label:has(input:checked) + span {
+    /* display: block;
+    flex-direction: column; */
+
+    /* position: absolute;
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: black; */
+  }
+}
+@media screen and (max-width: 767.98px) {
+  body {
+    color: blueviolet;
+  }
+}
