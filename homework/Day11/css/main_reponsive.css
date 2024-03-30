@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .container {
   width: 100%;
   max-width: 1320px;
@@ -416,12 +420,14 @@ article {
   color: #888888;
 }
 
-.footer-top-wrapper .row {
-  margin-inline: -32px;
+.footer-top-wrapper .row .col-xxl-4,
+.footer-top-wrapper .row .col-xxl-8 {
+  padding-inline: 0;
 }
 
 .footer-top-wrapper .footer-logo-text p {
   margin-block: 25px 10px;
+  width: 80%;
 }
 
 .footer-top-wrapper h4 {
@@ -635,6 +641,10 @@ article {
   .footer-logo img {
     margin-inline: auto;
   }
+
+  .footer-top-wrapper .footer-logo-text p {
+    width: 100%;
+  }
   /*--------------------- end section 1 --------------------*/
 
   /* .container .header-content {
@@ -692,7 +702,7 @@ article {
 
 @media screen and (max-width: calc(576px - 0.02px)) {
   .container {
-    max-width: 560px;
+    max-width: 460px;
     padding-inline: 0px;
   }
 }
