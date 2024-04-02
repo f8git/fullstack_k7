@@ -1,0 +1,430 @@
+html {
+  /* 
+                      default browser ==>100% = 16px
+                      font-size: 100%; 
+                      font-size: 1rem; ==> 1rem = 16px
+                    
+                      ==> 62.5% = 10px
+                        font-size: 62.5%;
+                        fonts-size: 1.6rem; ==> 1.6rem = 16px
+                       */
+
+  /* HACK */
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Rajdhani", sans-serif;
+  color: #3e3f5e;
+}
+
+.clear {
+  display: block;
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+.landing {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: url(../image/landing-background.jpg) 0 0;
+  padding: 80px 0px 100px;
+  overflow-x: hidden;
+}
+
+.landing-decoration {
+  display: none;
+  position: absolute;
+  top: -20%;
+  right: -40%;
+  height: 140%;
+  width: 64%;
+  border-radius: 50%;
+  background: url(../image/dot-texture.png) #fff center center/cover no-repeat;
+  pointer-events: none;
+  scale: 1;
+}
+
+.landing-info {
+  text-align: center;
+}
+
+.icon-logo-vikinger {
+  width: 28px;
+  height: 50px;
+  scale: 1.5;
+}
+
+.landing-info-title h1 {
+  font-size: 5.8rem;
+  line-height: 100%;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.landing-info-title h2 {
+  font-size: 2.4rem;
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.landing-info-text {
+  display: none;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  width: 70%;
+  margin: 0 auto 80px;
+}
+
+.landing-info {
+  color: #fff;
+}
+
+.switch {
+  display: flex;
+  justify-content: center;
+  border: solid 1px #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  font-weight: 700;
+}
+
+.switch-login,
+.switch-register {
+  text-align: center;
+  padding: 18px 0;
+  font-size: 1.6rem;
+  flex: 1;
+}
+
+.switch label:has(input:checked) {
+  color: #3e3f5e;
+  background-color: #fff;
+}
+
+.landing-form {
+  position: relative;
+  margin-block: 60px;
+  height: 100%;
+}
+
+.form-account {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px 32px;
+  transform: translateX(50%);
+  transition: all 0.3s linear;
+  box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+}
+
+.form-image img {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-25%, -25%);
+}
+/*  */
+form {
+  margin-top: 76px;
+}
+
+.form-account .form-item + .form-item {
+  margin-top: 28px;
+}
+.form-account h2 {
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.form-account label {
+  position: relative;
+  display: block;
+}
+
+.form-account label:has(input:not([type="checkbox"])) span {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  color: #adafca;
+  font-weight: 600;
+  padding: 0 6px;
+  background-color: white;
+  transition-property: top, font-size;
+  transition: 0.3s linear;
+}
+
+.form-account label:has(input:focus) span {
+  top: 0;
+  font-size: 1.3rem;
+}
+
+.form-account label:has(input:valid) span {
+}
+
+.form-account label input:not([type="checkbox"]) {
+  border: 1px solid #dedeea;
+  border-radius: 10px;
+  height: 5.4rem;
+  padding: 0 18px;
+  width: 100%;
+}
+
+.form-account label input:focus {
+  border: solid 1px #615dfa;
+}
+.form-item {
+  text-align: center;
+}
+
+.form-item:has(.input-checkbok) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-item .input-checkbok {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.form-item .input-checkbok label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.form-item .input-checkbok label span {
+  margin-right: 10px;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #dedeea;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.1s linear;
+}
+
+.form-item .input-checkbok label span i {
+  color: white;
+  opacity: 0;
+
+  transition: opacity 0.1s linear;
+}
+
+.form-item .input-checkbok label:has(input:checked) span {
+  background-color: #23d2e2;
+}
+
+.form-item .input-checkbok label:has(input:checked) span i {
+  opacity: 1;
+}
+
+.form-item .forgot a {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #adafca;
+  cursor: pointer;
+}
+
+.form-item .forgot a:hover {
+  color: #23d2e2;
+}
+
+.form-account button {
+  display: block;
+  background-color: #615dfa;
+  width: 100%;
+  padding: 18px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+}
+
+form button:hover {
+  background-color: #5753e4;
+}
+
+form p {
+  position: relative;
+  color: #3e3f5e;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.form-login p::after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  content: "";
+  display: block;
+  width: 70px;
+  height: 1px;
+  background-color: #dedeea;
+}
+
+.form-login p::before {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  content: "";
+  display: block;
+  width: 70px;
+  height: 1px;
+  background-color: #dedeea;
+}
+
+.social-item a {
+  position: relative;
+  display: inline-block;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 2.4rem;
+  cursor: pointer;
+  transition: transform 0.15s linear;
+}
+
+.social-item a:hover {
+  transform: translateY(-3px);
+}
+
+.social-item a + a {
+  margin-left: 20px;
+}
+
+.social-item a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-item a:nth-child(1) {
+  background-color: #3763d2;
+}
+.social-item a:nth-child(2) {
+  background-color: #1abcff;
+}
+.social-item a:nth-child(3) {
+  background-color: #7b5dfa;
+}
+.social-item a:nth-child(4) {
+  background-color: #fd434f;
+}
+
+/* end account login */
+
+.form-register p {
+  display: block;
+  font-weight: 500;
+  line-height: 2.5rem;
+}
+
+.landing:has(.switch-register input:checked) .form-register {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+  transform: translateX(0);
+}
+
+.landing:has(.switch-login input:checked) .form-login {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+  transform: translateX(0);
+}
+@media screen and (min-width: 576px) {
+  .landing-info-title h1 {
+    font-size: 10.4rem;
+  }
+
+  .switch {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .landing-form {
+    width: 500px;
+    margin-inline: auto;
+  }
+
+  .landing-form .form-account {
+    width: 100%;
+    padding: 64px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    height: 100%;
+  }
+
+  .row {
+    height: 100%;
+  }
+
+  .landing {
+    padding-block: 0px;
+  }
+
+  .landing-decoration {
+    display: block;
+  }
+
+  .landing-info {
+    position: relative;
+    height: 100%;
+  }
+
+  .landing-info-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .landing-form {
+    margin-block: 0px;
+    height: 100%;
+  }
+
+  .form-image img {
+    display: block;
+  }
+
+  .landing-info-text {
+    display: block;
+  }
+
+  .form-account {
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  .landing:has(.switch-register input:checked) .form-register {
+    transform: translate(0, -50%);
+  }
+
+  .landing:has(.switch-login input:checked) .form-login {
+    transform: translate(0, -50%);
+  }
+}

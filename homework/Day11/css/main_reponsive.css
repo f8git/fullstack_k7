@@ -382,6 +382,11 @@ article {
   margin: 0 auto;
 }
 
+.wrapper-4-content h4 {
+  color: #f9ba45;
+  text-transform: capitalize;
+}
+
 .wrapper-4-content h2 {
   width: 100%;
 }
@@ -440,9 +445,6 @@ article {
   margin-block: 25px 10px;
 }
 
-/* .footer-top-wrapper .row .footer-top-content-list > ul > li {
-  line-height: 2rem;
-} */
 .footer-top-content-list ul li {
   padding-block: 10px;
 }
@@ -476,7 +478,6 @@ article {
   background-color: #ececec;
 }
 
-/* .wrapper-3-img */
 /* xxl */
 @media screen and (max-width: calc(1400px - 0.02px)) {
   .container {
