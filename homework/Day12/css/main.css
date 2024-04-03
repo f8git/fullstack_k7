@@ -124,7 +124,7 @@ a {
   border-radius: 10px;
   padding: 40px 32px;
   transform: translateX(50%);
-  transition: all 0.3s linear;
+  transition: all 0.5s linear;
   box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
 }
 
@@ -212,8 +212,8 @@ form {
 .form-item .input-checkbok label span {
   margin-right: 10px;
   display: flex;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   border: 1px solid #dedeea;
   border-radius: 6px;
   align-items: center;
@@ -224,7 +224,7 @@ form {
 .form-item .input-checkbok label span i {
   color: white;
   opacity: 0;
-
+  font-size: 1.8rem;
   transition: opacity 0.1s linear;
 }
 
