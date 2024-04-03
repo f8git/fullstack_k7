@@ -449,7 +449,7 @@ p a {
 }
 
 @media screen and (min-width: 1500px) {
-  /* .landing-decoration {
+  .landing-decoration {
     display: block;
-  } */
+  }
 }
