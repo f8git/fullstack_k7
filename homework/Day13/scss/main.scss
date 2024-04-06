@@ -1,0 +1,380 @@
+body {
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  background-color: rgba(34, 34, 34, 0.9);
+  padding-block: 15px;
+  z-index: 999;
+}
+
+main {
+  position: absolute;
+  width: 100%;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 2.5rem;
+  i {
+    cursor: pointer;
+  }
+}
+
+header .list-menu {
+  // display: none;
+  visibility: hidden;
+}
+
+header .list-menu > ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: left;
+  // opacity: 0;
+
+  a {
+    display: block;
+    padding-block: 10px;
+    margin-block: 10px;
+    font-size: 1.8rem;
+    color: transparent;
+    user-select: none;
+  }
+}
+
+header .list-menu span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  background-color: #222;
+  overflow: hidden;
+  transition-property: bottom, visibility;
+  transition: 0.6s linear;
+}
+
+header .list-menu ul ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 15px;
+  // opacity: 1;
+  a {
+    color: #aaaaaa;
+  }
+  :hover {
+    color: #ffa500;
+  }
+}
+
+header:has(.menu-toggle input:checked) .list-menu {
+  visibility: visible;
+  span {
+    bottom: 0;
+  }
+}
+
+// header .list-menu  span {
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+// }
+
+header:has(.menu-toggle input:checked) .list-menu {
+  // bottom: 100%;
+  // transform: translateY(0);
+}
+
+.icon-logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  flex: 10;
+  a {
+    width: 100%;
+    span {
+      color: #ffa500;
+    }
+  }
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  right: 32%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 99px;
+  border: solid 2px #ffa500;
+  cursor: pointer;
+  vertical-align: middle;
+  i {
+    color: #ffa500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-size: 2rem;
+    cursor: pointer;
+    i + i {
+      display: none;
+    }
+  }
+}
+
+.btn input:checked + i {
+  display: none;
+  i + i {
+    display: block;
+  }
+}
+
+.btn-book-now {
+  display: flex;
+  align-items: center;
+  a {
+    padding: 12px 22px;
+    border-radius: 99px;
+    background-color: #ffa500;
+    font-size: 1.8rem;
+    color: black;
+    border: solid 2px #ffa500;
+    transition: background-color 0.3s linear;
+  }
+  :hover {
+    color: #ffa500;
+    background-color: #222;
+  }
+}
+
+.home {
+  position: relative;
+  border-radius: 10px;
+}
+
+.box-layout {
+  position: absolute;
+  inset: 0;
+  background-color: #07070769;
+  // margin-inline: 15px;
+  border-radius: 10px;
+}
+
+.content-wrraper {
+  position: relative;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.home .content {
+  position: relative;
+  background: url(../image/home-bg.jpg) no-repeat center center/cover;
+  margin: 110px 15px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 60px;
+  overflow: hidden;
+  color: white;
+  h3 {
+    font-size: 4rem;
+    line-height: 5rem;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffa500;
+    // text-shadow: 1px 1px 1px #ffa500, -1px 1px 1px #ffa500, 1px -1px 1px #ffa500,
+    //   -1px -1px 1px #ffa500;
+  }
+  h2 {
+    font-size: 4.5rem;
+    line-height: 6rem;
+  }
+  p {
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    color: #eee;
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+  a {
+    // top: 80%;
+    // left: 50%;
+    // translate: -50% 0;
+    // position: absolute;
+    // z-index: 2;
+    // margin-block: 25px 30px;
+    margin-top: 40px;
+
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffa500;
+    border: solid 2px #ffa500;
+    color: #eee;
+    border-radius: 99px;
+    color: #222;
+    font-size: 1.8rem;
+    transition: background-color 0.3s linear;
+  }
+}
+
+.home .content a:hover {
+  color: #ffa500;
+  background-color: #ffa6004d;
+}
+
+// .home > .container > .home > .container > a:hover {
+//   background-color: #ffa6004d;
+// }
+
+.book {
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  padding: 20px 30px;
+  width: 75%;
+  translate: -50% -40px;
+  box-sizing: border-box;
+
+  // margin-inline: 40px;
+
+  box-shadow: 0px 5px 10px 2px #6a6a6a8c;
+  .btn-book {
+    display: flex;
+    align-items: flex-end;
+    justify-content: stretch;
+  }
+  p {
+    display: block;
+    font-size: 2.8rem;
+    line-height: 4rem;
+    font-weight: 700;
+    // margin-bottom: 20px;
+    color: #ffa500;
+    text-transform: capitalize;
+  }
+  a {
+    width: 100%;
+    display: block;
+    font-size: 2rem;
+    padding: 15px;
+    text-align: center;
+    background-color: #ffa500;
+    border-radius: 99px;
+    border: solid 2px #ffa500;
+    transition: background-color 0.3s linear;
+  }
+
+  // margin-bottom: 500px;
+}
+
+.book a:hover {
+  color: #ffa500;
+  background-color: #ffa6004d;
+}
+
+body:has(.btn input:checked) {
+  background-color: black;
+  .list-menu {
+    background-color: #222;
+  }
+  .book {
+    background-color: #222;
+    box-shadow: none;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .btn {
+    right: 30%;
+  }
+  .book {
+    p {
+      font-size: 3.7rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .icon-logo {
+    flex: 0;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  header .list-menu {
+    visibility: visible;
+    display: block;
+    ul {
+      position: static;
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
+      li {
+        display: inline-block;
+        a {
+          margin-inline: 7px;
+          color: #aaaaaa;
+          margin-block: 0;
+        }
+        :hover {
+          color: #ffa500;
+        }
+        ul {
+          display: none;
+        }
+      }
+    }
+  }
+  header .list-menu {
+    ul {
+      li {
+        a {
+          font-size: 1.5rem;
+          color: white;
+          margin-block: 6px;
+        }
+      }
+    }
+  }
+  .btn {
+    right: 20%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header .list-menu {
+    ul {
+      li {
+        a {
+          font-size: 1.8rem;
+          margin-inline: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}
+@media screen and (min-width: 1400px) {
+}

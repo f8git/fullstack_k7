@@ -1,0 +1,16 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+header {
+  padding: 30px 0;
+}
+header .logo {
+  width: 100%;
+  height: auto;
+}
+header .logo img {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=ex01.css.map */
