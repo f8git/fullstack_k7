@@ -116,7 +116,7 @@ header:has(.menu-toggle input:checked) .list-menu {
   }
 }
 
-.btn {
+.btn label {
   position: absolute;
   top: 50%;
   right: 32%;
@@ -295,7 +295,7 @@ header:has(.menu-toggle input:checked) .list-menu {
 body:has(.btn input:checked) {
   background-color: black;
   .list-menu {
-    background-color: #222;
+    // background-color: #222;
   }
   .book {
     background-color: #222;
@@ -304,7 +304,7 @@ body:has(.btn input:checked) {
 }
 
 @media screen and (min-width: 576px) {
-  .btn {
+  .btn label {
     right: 30%;
   }
   .book {
@@ -355,8 +355,11 @@ body:has(.btn input:checked) {
         }
       }
     }
+    span {
+      background-color: transparent;
+    }
   }
-  .btn {
+  .btn label {
     right: 20%;
   }
 }

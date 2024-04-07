@@ -98,7 +98,7 @@ header:has(.menu-toggle input:checked) .list-menu span {
   color: #ffa500;
 }
 
-.btn {
+.btn label {
   position: absolute;
   top: 50%;
   right: 32%;
@@ -110,7 +110,7 @@ header:has(.menu-toggle input:checked) .list-menu span {
   cursor: pointer;
   vertical-align: middle;
 }
-.btn i {
+.btn label i {
   color: #ffa500;
   position: absolute;
   top: 50%;
@@ -119,7 +119,7 @@ header:has(.menu-toggle input:checked) .list-menu span {
   font-size: 2rem;
   cursor: pointer;
 }
-.btn i i + i {
+.btn label i i + i {
   display: none;
 }
 
@@ -257,16 +257,13 @@ header:has(.menu-toggle input:checked) .list-menu span {
 body:has(.btn input:checked) {
   background-color: black;
 }
-body:has(.btn input:checked) .list-menu {
-  background-color: #222;
-}
 body:has(.btn input:checked) .book {
   background-color: #222;
   box-shadow: none;
 }
 
 @media screen and (min-width: 576px) {
-  .btn {
+  .btn label {
     right: 30%;
   }
   .book p {
@@ -309,7 +306,10 @@ body:has(.btn input:checked) .book {
     color: white;
     margin-block: 6px;
   }
-  .btn {
+  header .list-menu span {
+    background-color: transparent;
+  }
+  .btn label {
     right: 20%;
   }
 }
