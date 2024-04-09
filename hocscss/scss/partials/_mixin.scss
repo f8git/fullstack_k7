@@ -1,0 +1,5 @@
+// mixin
+@mixin center($width, $spacer: 0) {
+  margin: $spacer auto;
+  width: $width;
+}
