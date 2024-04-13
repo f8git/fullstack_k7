@@ -1,0 +1,24 @@
+.row-slogan {
+  align-items: stretch;
+}
+
+.row-slogan-margin-bottom {
+  margin-bottom: 39px;
+}
+
+.slogan {
+  article {
+    display: flex;
+    width: 288px;
+    height: 100%;
+    column-gap: 16px;
+    align-items: flex-start;
+    // background-color: aquamarine;
+
+    .slogan-text {
+      display: flex;
+      flex-direction: column;
+      row-gap: 7px;
+    }
+  }
+}

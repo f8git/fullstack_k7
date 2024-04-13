@@ -1,0 +1,81 @@
+// $breakpoints: (
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px,
+// );
+
+// $columnSpace: 20px;
+
+// @each $name, $value in $breakpoints {
+//   @media screen and (min-width: #{$value}) {
+//     @for $i from 1 through 12 {
+//       .col-#{$name}-#{$i} {
+//         flex-basis: 100 / 12 * $i + 0%;
+//         max-width: 100 / 12 * $i + 0%;
+//         margin: 0 #{$columnSpace / 2};
+//       }
+//       .offset-#{$name}-#{$i} {
+//         margin-left: 100 / 12 * $i + 0%;
+//       }
+//     }
+//   }
+// }
+
+$nameSection: (
+  product_role: -6px,
+  product: 18px,
+  protect: -2px,
+  slogan: -3px,
+);
+
+@each $name, $value in $nameSection {
+  .#{$name}-margin-left-auto {
+    margin-inline: auto $value;
+  }
+
+  .#{$name}-margin-center-auto {
+    margin-inline: auto;
+  }
+
+  .#{$name}-margin-right-auto {
+    margin-inline: $value auto;
+  }
+}
+
+@mixin screenSm {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin screenMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin screenLg {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin screenXl {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin screenXxl {
+  @media screen and (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin screenXxxl {
+  @media screen and (max-width: 1600px) {
+    @content;
+  }
+}

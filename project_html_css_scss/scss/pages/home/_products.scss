@@ -1,0 +1,82 @@
+@use "../../partials/mixin";
+
+.background-color-orange {
+  background-color: #ffba94;
+}
+.background-color-green {
+  background-color: #c5ffa8;
+}
+
+.row-margin-bottom {
+  margin-bottom: 96px;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
+
+.products {
+  text-align: center;
+  margin-bottom: 129px;
+
+  h2 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 4.2rem;
+    margin-bottom: 50px;
+  }
+
+  .product-item {
+    width: 269px;
+    text-align: center;
+    .circle {
+      width: 269px;
+      height: 269px;
+      margin: 0 auto;
+      border-radius: 50%;
+    }
+
+    .product-img {
+      margin-top: -128px;
+    }
+
+    h3 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 2.8rem;
+      margin-bottom: 31px;
+    }
+
+    .description {
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 2.2rem;
+
+      p + p {
+        margin-top: 7px;
+      }
+
+      span {
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 2.7rem;
+      }
+    }
+
+    .action-btn {
+      a {
+        display: inline-block;
+        padding: 14px 12px;
+        margin-top: 31px;
+        background-color: #46b20f;
+        border-radius: 7px;
+        color: white;
+        transition: background-color 0.3s linear;
+
+        &:hover {
+          background-color: #328509;
+        }
+      }
+    }
+  }
+}

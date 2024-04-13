@@ -1,0 +1,19 @@
+//Import
+// @use "./partials/variables";
+// @use "./partials/reset";
+// @use "./partials/mixin";
+// @use "./partials/base";
+
+@use "./partials/index" as partials;
+
+// Components
+@use "./components/header";
+@use "./components/footer";
+
+// Pages
+
+// 1. Home
+@use "./pages/home/index" as home;
+
+// 1. Products
+@use "./pages/products/index" as products;
