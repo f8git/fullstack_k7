@@ -47,6 +47,7 @@
     // top: 0;
     // right: 0;
     height: 100%;
+    position: relative;
     // width: 800px;
 
     .background-img {
@@ -54,9 +55,14 @@
       left: 0;
       top: 0;
       background: #dcffca;
-      width: 750px;
+      width: calc(98vw / 2);
       height: 709px;
       border-radius: 16.667px 0px 0px 16.667px;
+
+      .background-color {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     img {

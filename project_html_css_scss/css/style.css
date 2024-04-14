@@ -230,6 +230,10 @@ header {
   cursor: pointer;
 }
 
+.col-right {
+  margin-left: auto;
+}
+
 .header-content {
   display: flex;
   column-gap: 50px;
@@ -397,15 +401,20 @@ footer .footer-bottom .footer-bottom-right .footer-bottom-right-item a {
 }
 .hero .hero-img {
   height: 100%;
+  position: relative;
 }
 .hero .hero-img .background-img {
   position: absolute;
   left: 0;
   top: 0;
   background: #dcffca;
-  width: 750px;
+  width: 49vw;
   height: 709px;
   border-radius: 16.667px 0px 0px 16.667px;
+}
+.hero .hero-img .background-img .background-color {
+  width: 100%;
+  height: 100%;
 }
 .hero .hero-img img {
   width: 718px;

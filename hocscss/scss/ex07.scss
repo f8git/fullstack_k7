@@ -1,0 +1,24 @@
+@use "./partials/header"; //namespace: header
+// @use "./partials/footer"; //namespace: footer
+// @use "./partials/variables" as bien; // doi namespace
+// @use "./partials/mixin";
+//  Truy cap: tennamespace.tenbien, tennamespace.tenham, tennamespace.tenmixin
+body {
+  background: header.$headerBg;
+  //   font-size: header.$-fontSize;
+  color: header.$primaryColor;
+}
+
+footer {
+  color: header.$footer-primaryColor;
+}
+
+// main {
+//   color: footer.$headerBg;
+// }
+
+// .products {
+//   color: bien.$primaryColor;
+//   //   @extend %center;
+//   @include mixin.center(1000px);
+// }
