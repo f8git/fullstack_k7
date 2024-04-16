@@ -406,9 +406,10 @@ footer .container-footer {
   justify-content: center;
 }
 footer .container-footer .row-footer-top {
-  justify-content: center;
+  justify-content: stretch;
+  padding: 0 60px;
   margin-bottom: 73px;
-  column-gap: 108px;
+  column-gap: 6.75vw;
   row-gap: 50px;
 }
 footer .container-footer .row-footer-top,
@@ -453,6 +454,11 @@ footer .footer-top .footer-top-content-right .footer-item a {
 footer .footer-top .footer-top-content-right .footer-item .icon-content {
   display: flex;
   column-gap: 10px;
+  align-items: flex-start;
+}
+footer .footer-top .footer-top-content-right .footer-item-two,
+footer .footer-top .footer-top-content-right .footer-item-three {
+  width: 222px;
 }
 footer .footer-top::after {
   display: block;

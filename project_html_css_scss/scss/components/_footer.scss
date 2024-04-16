@@ -1,3 +1,5 @@
+@use "../partials/mixin";
+
 footer {
   // display: none;
   padding-top: 67px;
@@ -10,9 +12,10 @@ footer {
     justify-content: center;
 
     .row-footer-top {
-      justify-content: center;
+      justify-content: stretch;
+      padding: 0 60px;
       margin-bottom: 73px;
-      column-gap: 108px;
+      column-gap: 6.75vw;
       row-gap: 50px;
     }
 
@@ -68,7 +71,13 @@ footer {
         .icon-content {
           display: flex;
           column-gap: 10px;
+          align-items: flex-start;
         }
+      }
+
+      .footer-item-two,
+      .footer-item-three {
+        width: 222px;
       }
     }
 
@@ -100,6 +109,19 @@ footer {
           height: 40px;
           border-radius: 50%;
           background-color: #dcffca;
+        }
+      }
+    }
+  }
+}
+
+@include mixin.screenXl() {
+  footer {
+    .footer-top {
+      .footer-top-content-right {
+        .row-footer-top-content-right {
+          // column-gap: 90px;
+          // justify-content: space-between;
         }
       }
     }
