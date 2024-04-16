@@ -7,6 +7,10 @@
   background-color: #c5ffa8;
 }
 
+.row-product {
+  row-gap: 96px;
+}
+
 .row-margin-bottom {
   margin-bottom: 96px;
 }
@@ -25,6 +29,15 @@
     line-height: 4.2rem;
     margin-bottom: 50px;
   }
+  .row-product {
+    align-items: stretch;
+  }
+
+  article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
   .product-item {
     width: 269px;
@@ -40,11 +53,34 @@
       margin-top: -128px;
     }
 
+    .product-text {
+      flex: 99;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .description {
+        position: relative;
+        margin-top: 30px;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 41px;
+          height: 2px;
+          top: -17px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #a3a3a3;
+        }
+      }
+    }
+
     h3 {
       font-size: 2.4rem;
       font-weight: 700;
       line-height: 2.8rem;
-      margin-bottom: 31px;
     }
 
     .description {
@@ -75,6 +111,67 @@
 
         &:hover {
           background-color: #328509;
+        }
+      }
+    }
+  }
+}
+
+@include mixin.screenXl() {
+  .product-margin-right-auto,
+  .product-margin-left-auto {
+    margin-inline: auto !important;
+  }
+  .products {
+    .product-item {
+      .circle {
+        display: none;
+      }
+
+      .product-img {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@include mixin.screenMd() {
+  .products {
+    .product-item {
+      width: auto;
+      padding: 0 10px;
+
+      .product-text {
+        h3 {
+          font-size: 2rem;
+        }
+
+        .description {
+          font-size: 1.5rem;
+
+          span {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mixin.screenSm() {
+  .products {
+    .product-item {
+      .product-text {
+        h3 {
+          font-size: 1.8rem;
+        }
+
+        .description {
+          font-size: 1.3rem;
+
+          span {
+            font-size: 1.8rem;
+          }
         }
       }
     }

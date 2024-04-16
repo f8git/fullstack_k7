@@ -3,6 +3,12 @@
 .product_role {
   padding-bottom: 215px;
 
+  .row-product_role {
+    justify-content: center;
+    column-gap: 22px;
+    row-gap: 22px;
+  }
+
   .product_role_title {
     h2 {
       text-align: center;
@@ -28,7 +34,7 @@
     justify-content: center;
     background-color: white;
     row-gap: 24px;
-    padding-inline: 34px;
+    padding: 30px 34px;
     border-radius: 3.333px;
     box-shadow: -5.833px 8.333px 72.5px 0px rgba(54, 54, 54, 0.12);
 
@@ -105,6 +111,112 @@
       height: 235px;
       border-radius: 50%;
       background-color: #ffd5bd;
+    }
+  }
+}
+
+@include mixin.screenXl() {
+  .product_role {
+    padding-bottom: 100px;
+    .article-one::before,
+    .article-three::before {
+      display: none;
+    }
+
+    .row-product_role {
+      article {
+        padding-inline: 30px;
+      }
+
+      .article-one,
+      .article-three {
+        max-width: 24.5vw;
+        min-width: 281px;
+      }
+
+      .article-two {
+        max-width: 28.58vw;
+        min-width: 328px;
+      }
+    }
+  }
+}
+
+@include mixin.screenLg() {
+  .product_role {
+    padding-bottom: 80px;
+    .product_role_title {
+      h2 {
+        width: 70%;
+      }
+
+      p {
+        width: 80%;
+        margin-bottom: 50px;
+      }
+    }
+    .row-product_role {
+      align-items: stretch;
+      [class*="article-"] {
+        justify-content: flex-start;
+        max-width: 294px;
+        height: 100%;
+        min-width: auto;
+      }
+    }
+  }
+}
+
+@include mixin.screenMd() {
+  .product_role {
+    .product_role_title {
+      h2 {
+        width: 90%;
+      }
+
+      p {
+        width: 90%;
+      }
+    }
+    .row-product_role {
+      [class*="article-"] {
+        max-width: 39vw;
+
+        span {
+          font-size: 3.7rem;
+        }
+        p {
+          font-size: 1.6rem;
+          line-height: 2.8rem;
+        }
+      }
+    }
+  }
+}
+
+@include mixin.screenSm() {
+  .product_role {
+    .product_role_title {
+      h2 {
+        width: 100%;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+
+    .row-product_role {
+      [class*="article-"] {
+        padding: 26px;
+        span {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.5rem;
+          line-height: 2.5rem;
+        }
+      }
     }
   }
 }

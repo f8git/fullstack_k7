@@ -1,18 +1,27 @@
-$column-gap: 24px;
+// $column-gap: 24px;
 
-.row-news {
-  margin: 0 calc(0px - (#{$column-gap} / 2));
-}
+// .row-news {
+//   margin: 0 calc(0px - (#{$column-gap} / 2));
+// }
 
-[class*="col-news-"] {
-  flex-basis: calc((1 / 12 * 100%) * #{$column-gap});
-  max-width: calc((1 / 12 * 100%) * #{$column-gap});
-  padding: 0 calc(#{$column-gap} / 2);
-}
+// [class*="col-news-"] {
+//   flex-basis: calc((1 / 12 * 100%) * #{$column-gap});
+//   max-width: calc((1 / 12 * 100%) * #{$column-gap});
+//   padding: 0 calc(#{$column-gap} / 2);
+// }
+
+@use "../../partials/mixin";
 
 .news {
   line-height: 2.1rem;
   margin-bottom: 100px;
+
+  .row-news {
+    column-gap: 24px;
+    row-gap: 30px;
+    justify-content: center;
+  }
+
   .new-title {
     display: flex;
     flex-direction: column;
@@ -36,13 +45,10 @@ $column-gap: 24px;
 
   .new-content {
     article {
+      max-width: 24vw;
       display: flex;
       flex-direction: column;
       row-gap: 17px;
-
-      img {
-        width: 100%;
-      }
 
       .description {
         display: flex;
@@ -107,6 +113,70 @@ $column-gap: 24px;
 
       img {
         margin-left: 4px;
+      }
+    }
+  }
+}
+
+@include mixin.screenXxl() {
+  .news {
+    .new-title {
+      p {
+        width: auto;
+      }
+    }
+    .new-content {
+      article {
+        width: 294px;
+        max-width: none;
+      }
+    }
+  }
+}
+@include mixin.screenLg() {
+  .news {
+    .new-content {
+      // .row-news {
+      //   column-gap: 2.4vw;
+      // }
+      article {
+        max-width: 39vw;
+        min-width: 330px;
+        width: auto;
+      }
+    }
+  }
+}
+@include mixin.screenMd() {
+  .news {
+    .new-content {
+      .row-news {
+        column-gap: 3.125vw;
+      }
+      article {
+        max-width: 42vw;
+        min-width: 250px;
+        width: auto;
+      }
+    }
+  }
+}
+
+@include mixin.screenSm() {
+  .news {
+    .new-content {
+      .row-news {
+        column-gap: 3.125vw;
+        row-gap: 60px;
+      }
+      article {
+        max-width: 420px;
+
+        .new-content-img {
+          img {
+            width: 420px;
+          }
+        }
       }
     }
   }

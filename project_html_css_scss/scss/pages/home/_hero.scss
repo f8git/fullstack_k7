@@ -4,6 +4,8 @@
 .hero {
   padding-bottom: 100px;
   position: relative;
+  overflow: hidden;
+  margin-top: 110px;
 
   .row-hero {
     align-items: stretch;
@@ -43,35 +45,19 @@
   }
 
   .hero-img {
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    height: 100%;
     position: relative;
-    // width: 800px;
-
-    .background-img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      background: #dcffca;
-      width: calc(98vw / 2);
-      height: 709px;
-      border-radius: 16.667px 0px 0px 16.667px;
-
-      .background-color {
-        width: 100%;
-        height: 100%;
-      }
-    }
+    width: 50vw;
+    background-color: #dcffca;
+    border-radius: 16.667px 0px 0px 16.667px;
+    height: 100%;
 
     img {
-      width: 718px;
+      width: 45vw;
       position: absolute;
       // right: 225px;
       left: 0;
       top: 50%;
-      margin-left: -166px;
+      margin-left: -17.75%;
       // top: 0;
       transform: translateY(-50%);
     }
@@ -79,17 +65,61 @@
     span {
       display: block;
       position: absolute;
-      left: 700px;
-      top: 55px;
-      font-size: 16.7rem;
+      left: 96%;
+      top: 50%;
+      font-size: 10.4vw;
       font-weight: 800;
       color: #22600038;
       text-transform: uppercase;
       transform-origin: top left;
-      transform: rotate(90deg);
+      transform: rotate(90deg) translateX(-50%);
     }
   }
 }
 
-@include mixin.screenXxxl() {
+@include mixin.screenXl() {
+  .container-low {
+    margin-inline: 20px;
+  }
+  .hero {
+    .hero-img {
+      border-radius: 17px;
+      text-align: center;
+      img {
+        position: static;
+        margin: 0;
+        transform: translateY(0);
+      }
+
+      span {
+        position: static;
+        transform: rotate(0deg) translateX(0);
+        top: 0;
+        left: 0;
+        font-size: 7rem;
+      }
+    }
+  }
+}
+
+@include mixin.screenLg() {
+  .row-hero {
+    margin-inline: 20px;
+  }
+  .hero {
+    .hero-text {
+      height: 400px;
+      text-align: center;
+      h1 {
+        width: auto;
+      }
+      p {
+        width: auto;
+      }
+    }
+
+    .hero-img {
+      width: 100%;
+    }
+  }
 }

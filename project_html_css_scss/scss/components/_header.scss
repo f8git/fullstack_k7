@@ -1,5 +1,17 @@
+@use "../partials/mixin";
+
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: white;
   box-shadow: 0px 1.667px 8.333px 0px rgba(0, 0, 0, 0.15);
+
+  img {
+    min-width: max-content;
+  }
 }
 
 .header-logo {
@@ -12,7 +24,7 @@ header {
 
 .header-content {
   display: flex;
-  //   margin-left: auto;
+  align-items: center;
   column-gap: 50px;
   float: right;
 
@@ -32,7 +44,6 @@ header {
 
       &:hover {
         color: #46b20f;
-
         &::after {
           position: absolute;
           content: "";
@@ -50,6 +61,10 @@ header {
     display: flex;
     align-items: center;
     column-gap: 50px;
+    padding-block: 51px 35px;
+    img {
+      height: 22px;
+    }
 
     .cart {
       position: relative;
@@ -63,17 +78,128 @@ header {
         align-items: center;
         justify-content: center;
         content: "3";
-        width: 20px;
-        height: 20px;
+        width: 14px;
+        height: 14px;
         background-color: #e05000;
         border-radius: 99px;
         color: white;
-        font-weight: 600;
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+
+      img {
+        width: 25px;
       }
     }
 
     .search {
       cursor: pointer;
+    }
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+}
+
+@include mixin.screenXl() {
+  header {
+    .col-right {
+      .header-content {
+      }
+      margin-left: 0;
+      column-gap: 0;
+    }
+  }
+}
+
+@include mixin.screenLg() {
+  header {
+    .col-right {
+      .header-content {
+        .header-content-title {
+          position: absolute;
+          top: 100px;
+          right: 10px;
+        }
+        nav {
+          display: block;
+          opacity: 0;
+          visibility: hidden;
+          // position: absolute;
+          // top: 100%;
+          width: 400px;
+
+          background-color: orange;
+          border-radius: 10px;
+          z-index: 1;
+          transition-property: opacity, visibility;
+          transition: 0.3s linear;
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -8px;
+            right: 8px;
+            border-left: 20px solid orange;
+            border-top: 20px solid orange;
+            transform: rotate(45deg);
+          }
+
+          .nav-item {
+            padding: 6px 6px;
+            position: relative;
+
+            + .nav-item::before {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 95%;
+              height: 1px;
+              background-color: #9e9b9b;
+            }
+
+            a {
+              padding: 10px 6px;
+              &:hover {
+                color: rgb(245, 244, 244);
+                background-color: #eb9533;
+                border-radius: 10px;
+                &::after {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+
+        &:has(input:checked) .header-content-title {
+          display: block;
+          nav {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        .toggle-btn {
+          display: block;
+
+          padding-block: 51px 35px;
+          label {
+            cursor: pointer;
+            &:hover {
+            }
+
+            i {
+              font-size: 2.2rem;
+            }
+          }
+        }
+      }
     }
   }
 }

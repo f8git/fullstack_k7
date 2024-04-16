@@ -14,32 +14,34 @@
   </head>
   <body>
     <header>
-      <div class="container">
+      <div class="container container-low">
         <div class="row">
           <div class="col-2">
             <div class="header-logo">
               <img src="./images/header/logo.svg" alt="" />
             </div>
           </div>
-          <div class="col-8 col-right">
+          <div class="col-10 col-right">
             <div class="header-content">
-              <nav>
-                <div class="nav-item">
-                  <a href="#">Trang chủ</a>
-                </div>
-                <div class="nav-item">
-                  <a href="#">Về Greenchop </a>
-                </div>
-                <div class="nav-item">
-                  <a href="#">Sản phẩm</a>
-                </div>
-                <div class="nav-item">
-                  <a href="#">Tin tức</a>
-                </div>
-                <div class="nav-item">
-                  <a href="#">Liên hệ</a>
-                </div>
-              </nav>
+              <div class="header-content-title">
+                <nav>
+                  <div class="nav-item">
+                    <a href="#">Trang chủ</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="#">Về Greenchop </a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="#">Sản phẩm</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="#">Tin tức</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="#">Liên hệ</a>
+                  </div>
+                </nav>
+              </div>
               <div class="action">
                 <div class="cart">
                   <img src="./images/header/cart.svg" alt="" />
@@ -48,15 +50,21 @@
                   <img src="./images/header/search.svg" alt="" />
                 </div>
               </div>
+              <div class="toggle-btn">
+                <label>
+                  <input type="checkbox" name="toggle-btn" hidden />
+                  <i class="fa-solid fa-bars"></i>
+                </label>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </header>
     <section class="hero">
-      <div class="container">
+      <div class="container container-low">
         <div class="row row-hero">
-          <div class="col-6">
+          <div class="col-6 col-lg-12">
             <div class="hero-text">
               <div class="hero-title">
                 <h2>GreenChop: Tiện gấp dễ gắp</h2>
@@ -70,12 +78,8 @@
               </p>
             </div>
           </div>
-          <div class="col-6 col-hero-right">
+          <div class="col-6 col-hero-right col-lg-12">
             <div class="hero-img">
-              <div class="background-img">
-                <div class="background-color">
-                </div>
-              </div>
               <img src="./images/hero/img_chop.svg" alt="" />
               <span>Green Chop</span>
             </div>
@@ -84,7 +88,7 @@
       </div>
     </section>
     <section class="product_role">
-      <div class="container">
+      <div class="container container-low">
         <div class="product_role_title">
           <h2>GreenChop: Giữ an toàn trong từng bữa ăn của người Việt</h2>
           <p>
@@ -93,9 +97,9 @@
             mọi bữa ăn mùa dịch tại các nhà hàng, khách sạn, quán ăn...
           </p>
         </div>
-        <div class="row">
-          <div class="col-4">
-            <article class="article-one product_role-margin-left-auto">
+        <div class="row row-product_role">
+          <div>
+            <article class="article-one">
               <div class="quality quality-1">
                 <img src="./images/product-role/quality.svg" alt="" />
               </div>
@@ -103,8 +107,8 @@
               <p>Hộ gia đình tin dùng GreenChop</p>
             </article>
           </div>
-          <div class="col-4">
-            <article class="article-two product_role-margin-center-auto">
+          <div>
+            <article class="article-two">
               <div class="quality quality-2">
                 <img src="./images/product-role/quality.svg" alt="" />
               </div>
@@ -112,8 +116,8 @@
               <p>Nhà hàng đã phục vụ GreenChop cho thực khách</p>
             </article>
           </div>
-          <div class="col-4">
-            <article class="article-three product_role-margin-right-auto">
+          <div>
+            <article class="article-three">
               <div class="quality quality-3">
                 <img src="./images/product-role/quality.svg" alt="" />
               </div>
@@ -125,13 +129,13 @@
       </div>
     </section>
     <section class="products">
-      <div class="container">
+      <div class="container container-low">
         <div class="products-title">
           <h2>Sản phẩm</h2>
         </div>
         <div class="product-content">
-          <div class="row row-margin-bottom">
-            <div class="col-4">
+          <div class="row row-product row-margin-bottom">
+            <div class="col-4 col-lg-6">
               <article class="product-item product-margin-left-auto">
                 <div class="circle background-color-orange"></div>
                 <div class="product-img">
@@ -155,7 +159,7 @@
                 </div>
               </article>
             </div>
-            <div class="col-4">
+            <div class="col-4 col-lg-6">
               <article class="product-item product-margin-center-auto">
                 <div class="circle background-color-green"></div>
                 <div class="product-img">
@@ -178,7 +182,7 @@
                 </div>
               </article>
             </div>
-            <div class="col-4">
+            <div class="col-4 col-lg-6">
               <article class="product-item product-margin-right-auto">
                 <div class="circle background-color-orange"></div>
                 <div class="product-img">
@@ -201,9 +205,7 @@
                 </div>
               </article>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-4">
+            <div class="col-4 col-lg-6">
               <article class="product-item product-margin-left-auto">
                 <div class="circle background-color-orange"></div>
                 <div class="product-img">
@@ -226,7 +228,7 @@
                 </div>
               </article>
             </div>
-            <div class="col-4">
+            <div class="col-4 col-lg-6">
               <article class="product-item product-margin-center-auto">
                 <div class="circle background-color-green"></div>
                 <div class="product-img">
@@ -249,7 +251,7 @@
                 </div>
               </article>
             </div>
-            <div class="col-4">
+            <div class="col-4 col-lg-6">
               <article class="product-item product-margin-right-auto">
                 <div class="circle background-color-orange"></div>
                 <div class="product-img">
@@ -278,7 +280,7 @@
       </div>
     </section>
     <section class="news">
-      <div class="container">
+      <div class="container container-low">
         <div class="new-title">
           <h2>Tin tức</h2>
           <p>
@@ -290,7 +292,7 @@
         </div>
         <div class="new-content">
           <div class="row row-news">
-            <div class="col-4 col-news-4">
+            <div class="col-news-4">
               <article>
                 <div class="new-content-img">
                   <img src="./images/news/image_left.svg" alt="" />
@@ -316,7 +318,7 @@
                 </p>
               </article>
             </div>
-            <div class="col-4 col-news-4">
+            <div class="col-news-4">
               <article class="article-center">
                 <div class="new-content-img">
                   <img src="./images/news/image_center.svg" alt="" />
@@ -342,7 +344,7 @@
                 </p>
               </article>
             </div>
-            <div class="col-4 col-news-4">
+            <div class="col-news-4">
               <article>
                 <div class="new-content-img">
                   <img src="./images/news/image_right.svg" alt="" />
@@ -379,7 +381,7 @@
       </div>
     </section>
     <section class="protect">
-      <div class="container">
+      <div class="container container-low">
         <div class="protect-title">
           <h2>
             GreenChop bảo vệ <br />
@@ -394,8 +396,8 @@
         <div class="protect-content">
           <div class="row row-protect">
             <span class="section-background"></span>
-            <div class="col-4 height-fill">
-              <article class="protect-margin-left-auto">
+            <div class="height-fill">
+              <article>
                 <div class="protect-content-img">
                   <img src="./images/protect/image-left.svg" alt="" />
                 </div>
@@ -406,8 +408,8 @@
                 </p>
               </article>
             </div>
-            <div class="col-4 height-fill">
-              <article class="protect-margin-center-auto">
+            <div class="height-fill">
+              <article>
                 <div class="protect-content-img">
                   <img src="./images/protect/image-center.svg" alt="" />
                 </div>
@@ -419,8 +421,8 @@
                 </p>
               </article>
             </div>
-            <div class="col-4 height-fill">
-              <article class="protect-margin-right-auto">
+            <div class="height-fill">
+              <article>
                 <div class="protect-content-img">
                   <img src="./images/protect/iamge-right.svg" alt="" />
                 </div>
@@ -433,10 +435,10 @@
       </div>
     </section>
     <section class="slogan">
-      <div class="container">
-        <div class="row row-slogan row-slogan-margin-bottom">
-          <div class="col-4">
-            <article class="slogan-margin-left-auto">
+      <div class="container container-slogan container-low">
+        <div class="row row-slogan">
+          <div>
+            <article>
               <div class="slogan-icon">
                 <img src="./images/slogan/quality.svg" alt="" />
               </div>
@@ -449,8 +451,8 @@
               </div>
             </article>
           </div>
-          <div class="col-4">
-            <article class="slogan-margin-center-auto">
+          <div>
+            <article>
               <div class="slogan-icon">
                 <img src="./images/slogan/protect.svg" alt="" />
               </div>
@@ -463,8 +465,8 @@
               </div>
             </article>
           </div>
-          <div class="col-4">
-            <article class="slogan-margin-right-auto">
+          <div>
+            <article>
               <div class="slogan-icon">
                 <img src="./images/slogan/convenient.svg" alt="" />
               </div>
@@ -474,10 +476,9 @@
               </div>
             </article>
           </div>
-        </div>
-        <div class="row row-slogan">
-          <div class="col-4">
-            <article class="slogan-margin-left-auto">
+
+          <div>
+            <article>
               <div class="slogan-icon">
                 <img src="./images/slogan/save.svg" alt="" />
               </div>
@@ -487,8 +488,8 @@
               </div>
             </article>
           </div>
-          <div class="col-4">
-            <article class="slogan-margin-center-auto">
+          <div>
+            <article>
               <div class="slogan-icon">
                 <img src="./images/slogan/monopoly.svg" alt="" />
               </div>
@@ -501,8 +502,8 @@
               </div>
             </article>
           </div>
-          <div class="col-4">
-            <article class="slogan-margin-right-auto">
+          <div>
+            <article>
               <div class="slogan-icon">
                 <img src="./images/slogan/fast.svg" alt="" />
               </div>
@@ -516,14 +517,14 @@
       </div>
     </section>
     <section class="contact">
-      <div class="container">
+      <div class="container container-low">
         <div class="row row-contact">
-          <div class="col-6 col-img">
+          <div class="col-img">
             <div class="contact-img">
               <img src="./images/contact/contact.svg" alt="" />
             </div>
           </div>
-          <div class="col-6 col-content">
+          <div class="col-content">
             <div class="contact-content">
               <div class="contact-title">
                 <h3>
@@ -566,127 +567,103 @@
       </div>
     </section>
     <footer>
-      <div class="container container-footer">
+      <div class="container container-footer container-low">
         <div class="footer-top">
-          <div class="row row-flex-start">
-            <div class="col-4">
-              <div class="footer-top-content-left">
-                <div class="logo">
-                  <img src="./images/footer/logo.svg" alt="" />
-                </div>
-                <p>
-                  GreenChop là bạn đồng hành <br />
-                  của người tiêu dùng
-                </p>
+          <div class="row row-footer-top">
+            <div class="footer-top-content-left">
+              <div class="logo">
+                <img src="./images/footer/logo.svg" alt="" />
               </div>
+              <p>
+                GreenChop là bạn đồng hành <br />
+                của người tiêu dùng
+              </p>
             </div>
-            <div class="col-8">
-              <div class="footer-top-content-right">
-                 <div class="footer-top-content-right-title">
-                  <div class="row row-flex-start">
-                    <div class="col-4">
-                      <h4>Trang chủ</h4>
-                    </div>
-                    <div class="col-4">
-                      <h4>Hỗ trợ</h4>
-                    </div>
-                    <div class="col-4">
-                      <h4>Liên hệ</h4>
-                    </div>
-                   </div>
+
+            <div class="footer-top-content-right">
+              <div class="row row-footer-top-content-right">
+                <div>
+                  <div class="footer-item">
+                    <h4>Trang chủ</h4>
+                    <a href="#">Về greenchop</a>
+                    <a href="#">Sản phẩm</a>
+                    <a href="#">Tin tức</a>
                   </div>
-                  <div class="footer-top-content-right-wrrap">
-                    <div class="row row-flex-start">
-                      <div class="col-4">
-                        <a href="#">Về greenchop</a>
-                      </div>
-                      <div class="col-4">
-                        <p>Đặt hàng trực tuyến (8h-22h)</p>
-                      </div>
-                      <div class="col-4">
-                        <div class="icon-content">
-                          <img src="./images/footer/mail.svg" alt="" />
-                          <p>greenchopvn@gmail.com</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row row-flex-start">
-                      <div class="col-4">
-                        <a href="#">Sản phẩm</a>
-                      </div>
-                      <div class="col-4">
-                        <div class="icon-content">
-                          <img src="./images/footer/alarm.svg" alt="" />
-                          <p>Thứ 2 - Thứ 6</p>
-                        </div>
-                      </div>
-                      <div class="col-4">
-                        <div class="icon-content">
-                          <img src="./images/footer/globe.svg" alt="" />
-                          <p>Greenchop.vn</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row row-flex-start">
-                      <div class="col-4">
-                        <a href="#">Tin tức</a>
-                      </div>
-                      <div class="col-4">
-                        <div class="icon-content">
-                          <img src="./images/footer/phone.svg" alt="" />
-                          <p>091 1717 222</p>
-                        </div>
-                      </div>
-                      <div class="col-4">
-                        <div class="icon-content">
-                          <img src="./images/footer/map-pin.svg" alt="" />
-                          <p>428 Điện Biên Phủ, P11, Quận 10, TPHCM</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                 </div>
-                
-              </div>
-            </div>
-          </div>
-          <div class="footer-bottom">
-            <div class="row">
-              <div class="col-6">
-                <div class="footer-bottom-left">
-                  <img src="./images/footer/certification.svg" alt="">
                 </div>
-              </div>
-              <div class="col-6">
-                <div class="footer-bottom-right">
-                  <div class="footer-bottom-right-item">
-                    <a href="#"><img src="./images/footer/youtube.svg" alt=""></a>
+                <div>
+                  <div class="footer-item">
+                    <h4>Hỗ trợ</h4>
+                    <p>Đặt hàng trực tuyến (8h-22h)</p>
+                    <div class="icon-content">
+                      <img src="./images/footer/alarm.svg" alt="" />
+                      <p>Thứ 2 - Thứ 6</p>
+                    </div>
+                    <div class="icon-content">
+                      <img src="./images/footer/phone.svg" alt="" />
+                      <p>091 1717 222</p>
+                    </div>
                   </div>
-                  <div class="footer-bottom-right-item">
-                    <a href="#">
-                      <img src="./images/footer/facebook.svg" alt="">
-                    </a>
-                  </div>
-                  <div class="footer-bottom-right-item">
-                    <a href="#">
-                      <img src="./images/footer/instagram.svg" alt="">
-                    </a>
-                  </div>
-                  <div class="footer-bottom-right-item">
-                    <a href="#">
-                      <img src="./images/footer/twitter.svg" alt="">
-                    </a>
+                </div>
+                <div>
+                  <div class="footer-item">
+                    <h4>Liên hệ</h4>
+                    <div class="icon-content">
+                      <img src="./images/footer/mail.svg" alt="" />
+                      <p>greenchopvn@gmail.com</p>
+                    </div>
+                    <div class="icon-content">
+                      <img src="./images/footer/globe.svg" alt="" />
+                      <p>Greenchop.vn</p>
+                    </div>
+                    <div class="icon-content">
+                      <img src="./images/footer/map-pin.svg" alt="" />
+                      <p>428 Điện Biên Phủ, P11, Quận 10, TPHCM</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            
-            
           </div>
         </div>
 
-        
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-6">
+              <div class="footer-bottom-left">
+                <img src="./images/footer/certification.svg" alt="" />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="footer-bottom-right">
+                <div class="footer-bottom-right-item">
+                  <a href="#"
+                    ><img src="./images/footer/youtube.svg" alt=""
+                  /></a>
+                </div>
+                <div class="footer-bottom-right-item">
+                  <a href="#">
+                    <img src="./images/footer/facebook.svg" alt="" />
+                  </a>
+                </div>
+                <div class="footer-bottom-right-item">
+                  <a href="#">
+                    <img src="./images/footer/instagram.svg" alt="" />
+                  </a>
+                </div>
+                <div class="footer-bottom-right-item">
+                  <a href="#">
+                    <img src="./images/footer/twitter.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
+    <script
+      src="https://kit.fontawesome.com/f203da0ed3.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

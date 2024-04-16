@@ -44,6 +44,12 @@ $nameSection: (
   }
 }
 
+@mixin screenXsm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
 @mixin screenSm {
   @media screen and (max-width: 576px) {
     @content;

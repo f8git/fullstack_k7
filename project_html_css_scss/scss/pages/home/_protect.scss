@@ -1,3 +1,5 @@
+@use "../../partials/mixin";
+
 .protect {
   margin-bottom: 254px;
   position: relative;
@@ -13,10 +15,14 @@
     .row-protect {
       // position: relative;
       align-items: stretch;
+      justify-content: center;
+      column-gap: 25px;
+      row-gap: 25px;
     }
 
     article {
-      width: 346px;
+      // width: 21.625vw;
+      width: 347px;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -25,10 +31,9 @@
       padding-bottom: 28px;
 
       .protect-content-img {
-        width: 100%;
+        // width: 100%;
 
         img {
-          width: 100%;
           border-radius: 9px;
         }
       }
@@ -53,5 +58,77 @@
     left: 0;
     margin-top: 115px;
     background-color: #fff0e7;
+  }
+}
+
+@include mixin.screenXl() {
+  .row-protect {
+    // column-gap: 20px;
+  }
+
+  article {
+    h3 {
+      // font-size: 1.8rem;
+    }
+    p {
+      // font-size: 1.4rem;
+    }
+  }
+}
+
+@include mixin.screenLg() {
+  .protect-content {
+    article {
+      max-width: 327px;
+    }
+  }
+}
+
+@include mixin.screenMd() {
+  .protect {
+    .protect-content {
+      .row-protect {
+        // column-gap: 4.5vw;
+        // row-gap: 4.5vw;
+
+        article {
+          max-width: 42vw;
+
+          h3 {
+            // font-size: 1.8rem;
+          }
+
+          p {
+            // font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mixin.screenSm() {
+  .protect {
+    .protect-content {
+      .row-protect {
+        column-gap: 28px;
+        row-gap: 28px;
+
+        article {
+          width: 347px;
+          // height: 359px;
+          max-width: none;
+          h3 {
+            // font-size: 1.5rem;
+            padding: 0 16px;
+          }
+
+          p {
+            // font-size: 1.2rem;
+            padding: 0 16px;
+          }
+        }
+      }
+    }
   }
 }

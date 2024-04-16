@@ -1,3 +1,5 @@
+@use "../../partials/mixin";
+
 .row-slogan {
   align-items: stretch;
 }
@@ -7,6 +9,15 @@
 }
 
 .slogan {
+  img {
+    width: 56px;
+    max-width: fit-content;
+  }
+  .row-slogan {
+    justify-content: center;
+    column-gap: 52px;
+    row-gap: 52px;
+  }
   article {
     display: flex;
     width: 288px;
@@ -19,6 +30,82 @@
       display: flex;
       flex-direction: column;
       row-gap: 7px;
+    }
+  }
+}
+
+@include mixin.screenMd() {
+  .slogan {
+    img {
+      width: 45px;
+    }
+    .row-slogan {
+      column-gap: 5vw;
+      row-gap: 5vw;
+    }
+
+    article {
+      max-width: 37.5vw;
+      min-width: 220px;
+
+      .slogan-text {
+        h3 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@include mixin.screenSm() {
+  .slogan {
+    .row-slogan {
+      column-gap: 4vw;
+      row-gap: 5vw;
+    }
+
+    article {
+      max-width: 37.5vw;
+      min-width: 200px;
+      column-gap: 10px;
+
+      .slogan-text {
+        h3 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+@include mixin.screenXsm() {
+  .slogan {
+    img {
+      width: 56px;
+    }
+
+    .row-slogan {
+      row-gap: 52px;
+    }
+
+    article {
+      max-width: 37.5vw;
+      min-width: 288px;
+      column-gap: 16px;
+
+      .slogan-text {
+        h3 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.6rem;
+        }
+      }
     }
   }
 }
