@@ -570,8 +570,9 @@ footer .footer-bottom .footer-bottom-right .footer-bottom-right-item a {
     margin-inline: 20px;
   }
   .hero .hero-text {
-    height: 400px;
+    height: auto;
     text-align: center;
+    margin-bottom: 20px;
   }
   .hero .hero-text h1 {
     width: auto;
