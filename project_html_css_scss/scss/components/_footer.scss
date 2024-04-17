@@ -10,10 +10,11 @@ footer {
   .container-footer {
     // width: 70%;
     justify-content: center;
+    padding: 0 60px;
 
     .row-footer-top {
       justify-content: stretch;
-      padding: 0 60px;
+
       margin-bottom: 73px;
       column-gap: 6.75vw;
       row-gap: 50px;
@@ -117,6 +118,9 @@ footer {
 
 @include mixin.screenXl() {
   footer {
+    .container-footer {
+      padding: 0px;
+    }
     .footer-top {
       .footer-top-content-right {
         .row-footer-top-content-right {

@@ -404,10 +404,10 @@ footer {
 }
 footer .container-footer {
   justify-content: center;
+  padding: 0 60px;
 }
 footer .container-footer .row-footer-top {
   justify-content: stretch;
-  padding: 0 60px;
   margin-bottom: 73px;
   column-gap: 6.75vw;
   row-gap: 50px;
@@ -486,6 +486,11 @@ footer .footer-bottom .footer-bottom-right .footer-bottom-right-item a {
   background-color: #dcffca;
 }
 
+@media screen and (max-width: 1200px) {
+  footer .container-footer {
+    padding: 0px;
+  }
+}
 .hero {
   padding-bottom: 100px;
   position: relative;
@@ -760,6 +765,7 @@ footer .footer-bottom .footer-bottom-right .footer-bottom-right-item a {
   }
   .product_role .row-product_role [class*=article-] {
     padding: 26px;
+    border-radius: 10px;
   }
   .product_role .row-product_role [class*=article-] span {
     font-size: 3rem;
