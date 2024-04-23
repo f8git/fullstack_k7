@@ -69,34 +69,41 @@ btn4.addEventListener("click", function () {
     "return_up"
   )[0].innerHTML = `[ ${arr[0]}, ${arr[1]}, ${arr[2]} ]`;
 });
-// console.log(typeof +a);
-// console.log(b);
 
-// var a = 25;
-// var b = 55;
-// var c = 3;
+// var month = 1;
 
-// console.log(` Max = ${a > b ? (a > c ? a : c) : b > c ? b : c}`);
-
-// console.time("clock");
-// var a = [5, 3, 2, 10, 7, 0];
-
-// for (var i = 0; i < a.length; i++) {
-//   for (var j = i + 1; j < a.length; j++) {
-//     if (a[i] > a[j]) {
-//       a[i] += a[j];
-//       a[j] = a[i] - a[j];
-//       a[i] = a[i] - a[j];
-//     }
+// if (month % 1 === 0) {
+//   if (month === 4 || month === 6 || month === 9 || month === 11) {
+//     console.log("so ngay trong thang la 30");
+//   } else if (month === 2) {
+//     console.log("so ngay trong thang la 28 hoac 29");
+//   } else {
+//     console.log("so ngay trong thang la 31");
 //   }
+// } else {
+//   alert("ngay trong thang la so nguyen duong");
 // }
 
-// console.log(a);
-// console.timeEnd("clock");
+// var n = 3;
+// var value = 1;
+// var total = 1;
 
-// var a = -4;
-// var b = -10;
+// for (var i = 1; i <= n; i++) {
+//   for (var j = i; j > 1; j--) {
+//     value *= j;
+//   }
+//   total += value;
+//   value = 1;
+// }
 
-// console.log(`Hai so ${a * b > 0 ? "cung dau" : "trai dau"}`);
+// console.log(total);
 
-// S = 10 + 20 + (5 ^ 10) / 2;
+var i = 2,
+  n = 10;
+
+do {
+  console.log(i);
+  if (n % i === 0) {
+  }
+  i++;
+} while (i <= Math.sqrt(a));

@@ -36,5 +36,25 @@
         <p>aaa</p>
       </div>
     </div>
+    <div class="form-check">
+      <label class="input-check">
+        <input type="checkbox" id="checkbox-bacgiang" />
+        Bac giang
+      </label>
+      <div class="child-diachi">
+        <label>
+          <input type="checkbox" />
+          TP.Bac giang
+        </label>
+      </div>
+    </div>
+    <script>
+      const modal = document.querySelector(".child-diachi");
+      const checkbox = document.querySelector(".input-check");
+      checkbox.addEventListener("change", function () {
+        if (modal.classList.contains("open")) modal.classList.remove("open");
+        else modal.classList.add("open");
+      });
+    </script>
   </body>
 </html>

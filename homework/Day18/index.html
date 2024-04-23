@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/grid.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>Bài tập buổi 16</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="content">
+            <div class="heading-title">
+              <h2>Bài 1: Tính tiền taxi</h2>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <label>
+                  Nhập số Km:
+                  <input
+                    type="number"
+                    name="input_a"
+                    class="input_a"
+                    value="100"
+                  />
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <button class="btn">Kết quả</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  Số tiền phải thanh toán là: <span class="return_a"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="content">
+            <div class="heading-title">
+              <h2>Bài 2: Tính tiền điện</h2>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <label>
+                  Số điện tiêu thụ hàng tháng
+                  <input
+                    type="number"
+                    name="input_s"
+                    class="input_s"
+                    value="1000"
+                  />
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <button class="btn">Kết quả</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p>Số tiền phải đóng: <span class="return_cost"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row_after">
+        <div class="col-6">
+          <div class="content">
+            <div class="heading-title">
+              <h2>Bài 3: Tính biểu thức</h2>
+              <p>S= 1*2 + 2*3 + 3*4 + ... + n*(n+1)</p>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <label>
+                  Nhập n:
+                  <input
+                    type="number"
+                    name="input_n"
+                    class="input_n"
+                    value="3"
+                  />
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <button class="btn">Kết quả</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p>S: <span class="return_s"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="content">
+            <div class="heading-title">
+              <h2>Bài 4: Số nguyên tố</h2>
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <label>
+                  Nhập số kiểm tra:
+                  <input
+                    type="number"
+                    name="input_snt"
+                    class="input_snt"
+                    value="5"
+                  />
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <button class="btn">Kết quả</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p>Hai số: <span class="return_result"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row_after">
+        <div class="col-6">
+          <div class="content">
+            <div class="heading-title">
+              <h2>Bài 5: Vẽ tam giác số</h2>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <label>
+                  Nhập số dòng:
+                  <input
+                    type="number"
+                    name="input_line"
+                    class="input_line"
+                    value="5"
+                  />
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <button class="btn">Kết quả</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p>Tam giác số: <span class="return_triangle"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="content">
+            <div class="heading-title">
+              <h2>Bài 6: Vẽ bàn cờ vua</h2>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <button class="btn">Kết quả</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p><span class="return_chess"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row_after">
+        <div class="col-12">
+          <div class="content">
+            <div class="heading-title">
+              <h2>Bài 5: Bảng cửu chương(nhưng 10 bảng )</h2>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <button class="btn">Kết quả</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="muti-table" style="flex: 1">
+                <div class="muti-table-content">
+                  <span class="return_muti-table"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

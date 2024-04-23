@@ -22,3 +22,15 @@
   top: 0;
   bottom: 0;
 }
+
+.child-diachi {
+  display: none;
+}
+
+.open {
+  display: block;
+}
+
+/* .form-check:has(label input:checked) .child-diachi {
+  display: block;
+} */
