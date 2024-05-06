@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.menu {
+  list-style: none;
+  background-color: black;
+  width: 50%;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu li a {
+  display: block;
+  padding: 5px 10px;
+}
+
+.menu ul {
+  padding-left: 10px;
+  background: #333;
+  display: none;
+}
+
+.menu ul.open {
+  display: block;
+}
+
+.menu li.has-chilren > a::after {
+  /* display: block;
+  position: absolute; */
+  content: "";
+  color: white;
+  float: right;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  vertical-align: middle;
+  transform: rotate(45deg);
+}
+
+.menu li.has-chilren.icon-open > a::after {
+  transform: rotate(225deg);
+}

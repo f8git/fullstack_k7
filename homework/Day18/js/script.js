@@ -129,10 +129,10 @@ btn4.addEventListener("click", function () {
 btn5.addEventListener("click", function () {
   var arr = [];
   k = 0;
-  var sOut = "<table><tbody>";
+  var sOut = "<div>";
   for (var i = 1; i <= 8; i++) {
     arr[i] = [];
-    sOut += "<tr>";
+    sOut += "<div>";
     if (i % 2) {
       k = 1;
     } else k = 0;
@@ -143,9 +143,9 @@ btn5.addEventListener("click", function () {
       // console.log(arr[i][j]);
       sOut += "<td>" + arr[i][j] + "</td>";
     }
-    sOut += "</tr>";
+    sOut += "</div>";
   }
-  sOut += "</tbody></table>";
+  sOut += "</div>";
 
   document.getElementsByClassName("return_chess")[0].innerHTML = `${sOut}`;
   var divBlack = document.querySelectorAll(".black");
