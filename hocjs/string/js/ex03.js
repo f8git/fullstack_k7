@@ -42,7 +42,7 @@ var id = setInterval(function () {
   count += posision;
   // console.log(count);
   // setTimeout(function () {
-  console.log(contentCopy.slice(0, count - value.length));
+  // console.log(contentCopy.slice(0, count - value.length));
   var contentResult =
     contentCopy.slice(0, count - value.length) +
     `<span>${contentCopy.slice(count - value.length, count)}</span>` +
@@ -50,14 +50,33 @@ var id = setInterval(function () {
 
   document.body.innerHTML = contentResult;
   // }, 500);
-  console.log(contentResult);
+  // console.log(contentResult);
   content = content.slice(posision + 1);
   posision = content.toLowerCase().indexOf(keyword.toLocaleLowerCase());
   count += 1;
   if (posision === -1) {
     content = contentCopy;
-    console.log("content", content);
+    // console.log("content", content);
     count = 0;
     posision = content.toLowerCase().indexOf(keyword.toLocaleLowerCase());
   }
 }, 500);
+
+// Uppercase()
+// var content = "  lê mạnh tiến";
+// content = content.trim();
+// content = content.charAt(0).toUpperCase() + content.slice(1);
+// // console.log(content);
+// var output = "";
+// for (let i = 0; i < content.length; i++) {
+//   if (content.charAt(i) === " " && content.charAt(i + 1) !== " ") {
+//     var position = i + 1;
+//     content =
+//       content.slice(0, position) +
+//       content.charAt(position).toUpperCase() +
+//       content.slice(position + 1);
+
+//     // content = content.slice(position + 1);
+//   }
+// }
+// console.log(content);

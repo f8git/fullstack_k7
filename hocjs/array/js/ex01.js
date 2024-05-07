@@ -1,0 +1,46 @@
+/*
+Mảng: Tập hợp nhiều giá trị trong 1 biến(Biến mảng)
+- Hàm tạo của mảng Array
+- Mảng là object
+*/
+
+var users = ["User 1", "User 2", "User 3"];
+// Lấy số lượng phần tử trong mảng
+console.log(users.length);
+
+users[users.length] = "User 4"; // Thêm phần tử mới vào mảng (Index tăng tuần tự, không bị trùng với index đã có)
+
+// Sửa phần tử mảng
+users[1] = "User 2 Update";
+console.log(users);
+console.log(users[0]); // Truy cập phần tử mảng
+
+// Duyệt mảng
+
+// for (var index = 0; index < users.length; index++) {
+//   console.log(users[index]);
+// }
+
+// for (var index in users) {
+//   console.log(index);
+// }
+
+// for (var user of users) {
+//   console.log(user);
+// }
+
+// Xóa phần tử trong mảng
+var indexDel = 1;
+var newArr = [];
+var newEl = "User 0";
+// for (var index in users) {
+//   if (+indexDel === +index) continue;
+//   newArr[newArr.length] = users[index];
+// }
+
+newArr = [newEl];
+for (var index in users) {
+  newArr[newArr.length] = users[index];
+}
+
+console.log("New Arr", newArr);
