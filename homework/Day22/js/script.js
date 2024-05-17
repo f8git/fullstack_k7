@@ -122,3 +122,63 @@ for (var i = 0; i < 3; i++) {
 // var rowArr1 = ["<img>", ["<h2>Title 1</h2>", "<p>Lorem</p>"]];
 // var rowArr2 = [["<h2>Title 2</h2>", "<p>Lorem</p>"], "<img>"];
 // var rowArr3 = ["<img>", ["<h2>Title 3</h2>", "<p>Lorem</p>"]];
+
+// var arrBTap_3 = [
+//   ["a", 1, true],
+//   ["b", 2, false],
+// ];
+
+// function Unzip(arr = []) {
+//   return arrBTap_3.reduce(
+//     (x, y) => (y.forEach((w, i) => x[i].push(w)), x),
+//     Array.from({ length: Math.max(...arr.map((y) => y.length)) }).map(() => [])
+//   );
+// }
+
+// console.log("Mảng được tách theo đúng kiểu dữ liệu: ", Unzip(arrBTap_3));
+// console.log(" ");
+// // end bTap_3
+
+// function initMap() {
+//   var map = new google.maps.Map(document.getElementById("map"), {
+//     center: { lat: 21.0168864, lng: 105.7855574 },
+//     zoom: 15,
+//   });
+// }
+
+// initMap();
+// In this example, we center the map, and add a marker, using a LatLng object
+// literal instead of a google.maps.LatLng object. LatLng object literals are
+// a convenient way to add a LatLng coordinate and, in most cases, can be used
+// in place of a google.maps.LatLng object.
+let map;
+
+function initMap() {
+  const mapOptions = {
+    zoom: 8,
+    center: { lat: -34.397, lng: 150.644 },
+  };
+
+  map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+  const marker = new google.maps.Marker({
+    // The below line is equivalent to writing:
+    // position: new google.maps.LatLng(-34.397, 150.644)
+    position: { lat: -34.397, lng: 150.644 },
+    map: map,
+  });
+  // You can use a LatLng literal in place of a google.maps.LatLng object when
+  // creating the Marker object. Once the Marker object is instantiated, its
+  // position will be available as a google.maps.LatLng object. In this case,
+  // we retrieve the marker's position using the
+  // google.maps.LatLng.getPosition() method.
+  const infowindow = new google.maps.InfoWindow({
+    content: "<p>Marker Location:" + marker.getPosition() + "</p>",
+  });
+
+  google.maps.event.addListener(marker, "click", () => {
+    infowindow.open(map, marker);
+  });
+}
+
+window.initMap = initMap;
