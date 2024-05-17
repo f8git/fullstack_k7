@@ -58,7 +58,7 @@ console.log(
 // **********************************************************
 var numbers = [0, 2, 1, 4];
 
-for (var i = 0; ; i++) {
+for (var i = 1; ; i++) {
   if (!numbers.includes(i)) {
     console.log(
       `Số nguyên dương nhỏ nhất không có trong mảng [${numbers}] là: ${i}`
