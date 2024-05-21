@@ -28,7 +28,7 @@ function getError(field) {
   return logs;
 }
 
-console.log(getError("password.required"));
+console.log(getError("password.same"));
 
 // *********************************
 
@@ -39,19 +39,19 @@ const customers = [
   { name: "Nguyễn Văn C", age: 12, address: "TP.HCM" },
 ];
 
-function createCustomers(customers) {
-  customers = customers
-    .sort(function (a, b) {
-      return a.age - b.age;
-    })
-    .map(function (user) {
-      user["shortName"] =
-        user.name.slice(0, user.name.indexOf(" ")) +
-        user.name.slice(user.name.lastIndexOf(" "));
-      return user;
-    });
-  return customers;
-}
+var createCustomers = (customers) => (
+  (customers = customers
+    .sort((a, b) => a.age - b.age)
+    .map(
+      (user) => (
+        (user["shortName"] =
+          user.name.slice(0, user.name.indexOf(" ")) +
+          user.name.slice(user.name.lastIndexOf(" "))),
+        user
+      )
+    )),
+  customers
+);
 
 const result = createCustomers(customers);
 console.log(result);
@@ -60,23 +60,22 @@ console.log(result);
 console.log("Bài 3:");
 var data = [];
 function handleRegister(name = "", password = "", email = "") {
-  if (name === "" || password === "" || email === "") {
-    alert("Đăng kí thông tin thiếu!");
-  } else {
-    data.push({ name: name, password: password, email: email, role: "user" });
-  }
+  return name === "" || password === "" || email === ""
+    ? alert("Đăng kí thông tin thiếu!")
+    : data.push({
+        name: name,
+        password: password,
+        email: email,
+        role: "user",
+      });
 }
 function handleLogin(email = "", password = "") {
   var result = data.filter(function (user) {
-    if ((user.email === email) & (user.password === password)) {
+    if (user.email === email && user.password === password) {
       return true;
     }
   });
-  if (result.length) {
-    return result;
-  } else {
-    alert("Thông tin đăng nhập không hợp lệ");
-  }
+  return result.length ? result : `Thông tin đăng nhập không hợp lệ`;
 }
 
 var dataRegister = handleRegister(
@@ -91,6 +90,6 @@ var dataRegister = handleRegister(
   "nguyenvanb@email.com"
 );
 
-var dataLogin = handleLogin("nguyenvana@email.com", "123456");
+var dataLogin = handleLogin("nguyenvana@email.com", "1234567");
 console.log("data =", data);
 console.log("dataLogin", dataLogin);

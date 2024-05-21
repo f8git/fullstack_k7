@@ -76,7 +76,7 @@ var arr = [
 // console.log(arr);
 
 var newArr = Array.from(Array(20).keys()).map(function (item) {
-  return item + 1;
+  return [item + 1];
 });
 
 console.log(newArr);
