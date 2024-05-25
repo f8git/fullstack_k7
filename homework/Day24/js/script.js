@@ -90,6 +90,6 @@ var dataRegister = handleRegister(
   "nguyenvanb@email.com"
 );
 
-var dataLogin = handleLogin("nguyenvana@email.com", "1234567");
+var dataLogin = handleLogin("nguyenvana@email.com", "123456");
 console.log("data =", data);
 console.log("dataLogin", dataLogin);
