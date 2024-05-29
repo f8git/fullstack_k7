@@ -61,6 +61,7 @@ function buildTree(arr, parentId = 0) {
   for (var item of arr) {
     if (item.parent === parentId) {
       var children = buildTree(arr, item.id);
+      console.log(children);
       if (children.length > 0) {
         item.children = children;
       }
