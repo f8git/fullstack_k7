@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account {
+  /* display: flex; */
+  align-items: center;
+}
+
+.account p {
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.271);
+}
+
+.account-notification {
+  position: absolute;
+  background-color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.account-notification .title {
+  display: flex;
+}
+
+.account-notification .title button {
+  font-size: 2rem;
+  width: 230px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.check-btn {
+  background-color: green;
+}
