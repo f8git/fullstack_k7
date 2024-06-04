@@ -156,8 +156,7 @@ var handleSubmitEdit = function (e) {
       <img src="./icons/delete.svg" alt="" />
     </div>
   </div>`;
-  handleTarget();
-  submitEdit.removeAddEventListener("click", handleSubmitEdit);
+  // handleTarget();
   todoListContent = todoListContent.map(function (item, index) {
     return todoList.children[index].outerHTML;
   });
