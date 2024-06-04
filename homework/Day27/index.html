@@ -3,30 +3,277 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Ecommerce website UI</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Embed fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
-    <div class="header">
-      <div class="logo-img">
-        <img src="./img/logo.svg" alt="" width="100px" />
+    <!-- <div class="wrapper">
+      <div class="wrapper-inner"> -->
+    <!-- Sidebar -->
+    <!-- <aside class="sidebar"> -->
+    <!-- <a href="" class="logo-link">
+            <img src="./img/logo.svg" alt="" />
+          </a>
+
+          <div class="heading">
+            <h2>Explore</h2>
+            <div class="toggle-nav">
+              <label>
+                <input type="checkbox" name="toggle" hidden />
+                <i class="fa-solid fa-bars"></i>
+              </label>
+            </div>
+          </div>
+
+          <nav class="nav">
+            <a href="" class="nav-item">
+              <img src="./icons/sidebar-icon-1.svg" alt="" class="icon" />
+              New In
+            </a>
+            <a href="" class="nav-item">
+              <img src="./icons/sidebar-icon-2.svg" alt="" class="icon" />
+              Clothing
+            </a>
+            <a href="" class="nav-item">
+              <img src="./icons/sidebar-icon-3.svg" alt="" class="icon" />
+              Shoes
+            </a>
+            <a href="" class="nav-item">
+              <img src="./icons/sidebar-icon-4.svg" alt="" class="icon" />
+              Accessories
+            </a>
+            <a href="" class="nav-item">
+              <img src="./icons/sidebar-icon-5.svg" alt="" class="icon" />
+              Activewear
+            </a>
+            <a href="" class="nav-item">
+              <img src="./icons/sidebar-icon-6.svg" alt="" class="icon" />
+              Gifts & Living
+            </a>
+            <a href="" class="nav-item">
+              <img src="./icons/sidebar-icon-7.svg" alt="" class="icon" />
+              Inspiration
+            </a>
+          </nav>
+
+          <button class="chat-btn">
+            <span class="icon"><img src="./icons/chat.svg" alt="" /></span>
+            <p>Help Center</p>
+          </button>
+        </aside> -->
+
+    <!-- Header -->
+    <!-- <header class="header">
+          <form action="" class="search-form">
+            <img src="./icons/seach.svg" alt="" class="icon" />
+            <input type="text" class="search" placeholder="Search store" />
+          </form>
+
+          <nav class="nav">
+            <a href="" class="nav-link active">Products</a>
+            <a href="" class="nav-link">Story</a>
+            <a href="" class="nav-link">Manufacturing</a>
+            <a href="" class="nav-link">Packaging</a>
+          </nav>
+
+          <div class="actions">
+            <a href="" class="action-link">
+              <img src="./icons/cart.svg" alt="" class="action-icon" />
+            </a>
+            <a href="" class="action-link">
+              <img src="./icons/user.svg" alt="" class="action-icon" />
+            </a>
+          </div>
+
+          <div class="toggle-nav">
+            <label>
+              <input type="checkbox" name="toggle" hidden />
+              <i class="fa-solid fa-bars"></i>
+            </label>
+          </div>
+        </header> -->
+
+    <!-- Main -->
+    <!-- <main class="main">
+          <div class="wide"><img src="./img/flower-1.jpg" alt="" /></div>
+          <div class="tall"><img src="./img/flower-2.jpg" alt="" /></div>
+          <div class="wide"><img src="./img/flower-3.jpg" alt="" /></div>
+          <div class="tall"><img src="./img/flower-4.jpg" alt="" /></div>
+          <div class="tall"><img src="./img/flower-5.jpg" alt="" /></div>
+          <div class="tall"><img src="./img/flower-6.jpg" alt="" /></div>
+          <div class="wide"><img src="./img/flower-7.jpg" alt="" /></div>
+          <div class="wide"><img src="./img/flower-8.jpg" alt="" /></div>
+        </main>
       </div>
-      <div class="account">
-        <p>Đăng nhập</p>
+    </div> -->
+    <header class="header">
+      <div class="img-logo">
+        <a href="" class="logo-link">
+          <img src="./logo/logo.svg" alt="" />
+        </a>
+      </div>
+      <div class="action">
+        <a href="" class="action-link">
+          <img src="./icons/user.svg" alt="" />
+          Đăng nhập
+        </a>
       </div>
       <div class="overlay"></div>
-      <div class="account-notification">
-        <div class="title">
-          <button>Đăng nhập</button>
-          <button>Đăng ký</button>
+      <div class="account-noti">
+        <div class="img-logo">
+          <a href="" class="logo-link">
+            <img src="./logo/logo.svg" alt="" />
+          </a>
+          <img class="close" src="./icons/close.svg" alt="" />
+        </div>
+        <div class="switch-btn">
+          <label class="btn switch-btn-login"
+            ><input type="radio" name="switch-btn" hidden checked /> Đăng
+            nhập</label
+          >
+          <label class="btn switch-btn-register"
+            ><input type="radio" name="switch-btn" hidden /> Đăng ký</label
+          >
+        </div>
+        <div class="auth-form auth-form-login">
+          <div class="auth-form-text">với các tài khoản mạng xã hội</div>
+          <div class="auth-form-socials">
+            <a href="" class="social social-gg">
+              <img src="./icons/google.svg" alt="" />
+              Google
+            </a>
+            <a href="" class="social social-fb">
+              <img src="./icons/facebook.svg" alt="" />
+              Facebook
+            </a>
+          </div>
+          <div class="auth-form-text">hoặc</div>
+          <div class="auth-form__form">
+            <div class="auth-form__group">
+              <label>
+                Email
+                <input
+                  type="text"
+                  class="auth-form__input email"
+                  placeholder="Email"
+                /> 
+                <p class="">Vui lòng nhập đúng định dạng email!</p>
+                <p class="">Vui lòng nhập thông tin</p>
+              </label>
+            </div>
+            <div class="auth-form__group">
+              <label>
+                Password
+                <input
+                  type="password"
+                  class="auth-form__input password"
+                  placeholder="Password"
+                />
+                <p class="">Vui lòng nhập thông tin</p>
+                <label>
+                  <input type="radio" name="eye" class="eye" checked  hidden/>
+                  <img src="./icons/eye.svg" alt="" />
+                </label>
+                <label>
+                  <input type="radio" name="eye" class="mat noeye"  hidden/>
+                  <img src="./icons/noeye.svg" alt="" />
+                </label>
+              </label>
+            </div>
+            <div class="auth-form__text">
+              <a href="">Quên mật khẩu?</a>
+            </div>
+            <div class="auth-form__submit-btn">
+              <button>Đăng nhập</button>
+            </div>
+          </div>
+        </div>
+          <div class="auth-form auth-form-register">
+            <div class="auth-form-text auth-form-text-register">
+              Hoàn thành đăng ký, và bắt đầu trải nghiệm ngay!
+            </div>
+
+            <div class="auth-form__form">
+              <div class="auth-form__group">
+                <label>
+                  Họ và tên
+                  <input
+                    type="text"
+                    class="auth-form__input fullname"
+                    placeholder="Họ và tên"
+                  />
+                </label>
+              </div>
+              <div class="auth-form__group">
+                <label>
+                  Email
+                  <input
+                    type="text"
+                    class="auth-form__input email"
+                    placeholder="Email"
+                  />
+                  <p class="">Vui lòng nhập đúng định dạng email!</p>
+                  <p class="">Vui lòng nhập thông tin</p>
+                </label>
+              </div>
+              <div class="auth-form__group">
+                <label>
+                  Password
+                  <input
+                    type="password"
+                    class="auth-form__input password"
+                    placeholder="Password"
+                  />
+                  <p class="">Vui lòng nhập thông tin</p>
+                  <label>
+                    <input type="radio" name="eye1" class="eye1" checked hidden />
+                    <img src="./icons/eye.svg" alt="" />
+                  </label>
+                  <label>
+                    <input type="radio" name="eye1" class="noeye1" hidden />
+                    <img src="./icons/noeye.svg" alt="" />
+                  </label>
+                </label>
+              </div>
+              <div class="auth-form__text">
+                <p>
+                  Bằng cách đăng ký tài khoản, bạn cũng đồng thời chấp nhận mọi
+                  <a href="">điều kiện về qui định và chính sách của Dân trí</a>
+                </p>
+              </div>
+              <div class="auth-form__submit-btn">
+                <button>Đăng nhập</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </header>
+
+    <script
+      src="https://kit.fontawesome.com/f203da0ed3.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

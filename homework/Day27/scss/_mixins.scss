@@ -12,12 +12,12 @@ $columnSpace: 20px;
   @media screen and (min-width: #{$value}) {
     @for $i from 1 through 12 {
       .col-#{$name}-#{$i} {
-        flex-basis: calc(100 / 12) * $i + 0%;
-        max-width: calc(100 / 12) * $i + 0%;
-        margin: 0 #{calc($columnSpace / 2)};
+        flex-basis: 100 / 12 * $i + 0%;
+        max-width: 100 / 12 * $i + 0%;
+        margin: 0 #{$columnSpace / 2};
       }
       .offset-#{$name}-#{$i} {
-        margin-left: calc(100 / 12) * $i + 0%;
+        margin-left: 100 / 12 * $i + 0%;
       }
     }
   }
