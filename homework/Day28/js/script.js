@@ -46,7 +46,6 @@ var handleBntDelete = function (e) {
       console.log(newArr[index]);
       return true;
     }
-    return 0;
   });
   // console.log(newArr);
   todoListContent = newArr;
@@ -160,6 +159,12 @@ var handleSubmitEdit = function (e) {
     console.log("Delete");
     btnDelete.addEventListener("click", handleBntDelete);
   });
+  btnEdits = document.querySelectorAll(".btn-edit");
+  btnEdits.forEach(function (btnEdit, index) {
+    console.log("aaaaaaaaaaaaaaaaaa");
+    btnEdit.addEventListener("click", handleBntEdit);
+  });
+  handleTarget();
 };
 
 var handleBtnSubmit = function (e) {
@@ -200,13 +205,17 @@ var handleBtnSubmit = function (e) {
     btnEdits.forEach(function (btnEdit, index) {
       btnEdit.addEventListener("click", handleBntEdit);
     });
+    submitEdits = document.querySelectorAll(".todo-list .form-submit");
+    submitEdits.forEach(function (submitEdit) {
+      submitEdit.addEventListener("click", handleSubmitEdit);
+    });
   });
 };
 btnSubmits.forEach(function (btnSubmit) {
   if (btnSubmit === btnSubmits[0]) {
     btnSubmit.addEventListener("click", handleBtnSubmit);
     btnEdits.forEach(function (btnEdit, index) {
-      btnEdit.removeEventListener("click", handleBntEdit);
+      // btnEdit.removeEventListener("click", handleBntEdit);
     });
   } else {
     btnSubmit.addEventListener("click", handleSubmitEdit);

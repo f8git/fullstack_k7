@@ -1,11 +1,12 @@
 var btn = document.querySelector(".btn");
 var input = document.querySelector(".input");
 
-// btn.addEventListener("dblclick", function (e) {
-//   console.log(this);
-//   //   console.log(e.target);
-//   console.log(e);
-// });
+btn.addEventListener("dblclick", function (e) {
+  console.log(this);
+  console.log(e.target);
+
+  // console.log(e);
+});
 
 // input.addEventListener("input", function (e) {
 //   //   console.log(e);
@@ -43,24 +44,25 @@ var input = document.querySelector(".input");
 //   console.log(`offsetY = ${e.offsetY}`);
 // });
 
-var offsetx;
-var offsety;
-var handleMouseDown = function (e) {
-  offsetx = e.offsetX;
-  offsety = e.offsetY;
-  //   console.log(e);
-  document.addEventListener("mousemove", handleMouseMove);
-};
-var handleMouseMove = function (e) {
-  console.log(e.clientX - offsetx);
-  document.addEventListener("mouseup", handleMouseUp);
+// var offsetx;
+// var offsety;
+// var handleMouseDown = function (e) {
+//   offsetx = e.offsetX;
+//   offsety = e.offsetY;
+//   //   console.log(e);
+//   document.addEventListener("mousemove", handleMouseMove);
+// };
+// var handleMouseMove = function (e) {
+//   // console.log(e.clientX);
+//   // console.log(e.clientX - offsetx);
+//   document.addEventListener("mouseup", handleMouseUp);
 
-  btn.style.transform = `translate(${e.clientX - offsetx - 10}px,${
-    e.clientY - offsety - 10
-  }px)`;
-};
-var handleMouseUp = function (e) {
-  document.removeEventListener("mousemove", handleMouseMove);
-};
+//   btn.style.transform = `translate(${e.clientX - offsetx - 10}px,${
+//     e.clientY - offsety - 10
+//   }px)`;
+// };
+// var handleMouseUp = function (e) {
+//   document.removeEventListener("mousemove", handleMouseMove);
+// };
 
-btn.addEventListener("mousedown", handleMouseDown);
+// btn.addEventListener("mousedown", handleMouseDown);
