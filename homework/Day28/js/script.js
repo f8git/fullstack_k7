@@ -33,6 +33,33 @@ var handleTarget = function () {
   });
 };
 
+var handleBntDelete = function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  this.parentElement.parentElement.outerHTML = "";
+  todoList = document.querySelector(".todo-list");
+  var newArr = [];
+  todoListContent = todoListContent.filter(function (item, index) {
+    // console.log(todoList.children[index]);
+    if (todoList.children[index]) {
+      newArr[newArr.length] = todoList.children[index].outerHTML;
+      console.log(newArr[index]);
+      return true;
+    }
+    return 0;
+  });
+  // console.log(newArr);
+  todoListContent = newArr;
+  todoTexts = document.querySelectorAll(".todo p");
+  targetList = targetList.filter(function (item, index) {
+    if (todoTexts[index]) {
+      return todoTexts[index].classList.contains("text-line-through")
+        ? true
+        : false;
+    }
+  });
+};
+
 var contentListEl = function (arr, targets) {
   arr = arr
     .map(function (item, index) {
@@ -49,6 +76,14 @@ var contentListEl = function (arr, targets) {
     })
     .join("");
   todoList.innerHTML = arr;
+  todoTexts = document.querySelectorAll(".todo p");
+  todoTexts.forEach(function (item, index) {
+    if (targetList[index]) {
+      item.classList.add("text-line-through");
+    }
+
+    console.log(targetList);
+  });
   handleTarget();
   // todoTexts = document.querySelectorAll(".todo p");
   // todoTexts.forEach(function (item, index) {
@@ -80,7 +115,6 @@ var handleBntEdit = function (e) {
       <button type="submit" class="form-submit">Add Task</button>
       </form>`;
   todoList = document.querySelector(".todo-list");
-  // console.log(todoList.children);
   todoListContent = todoListContent.map(function (item, index) {
     return todoList.children[index].outerHTML;
   });
@@ -90,54 +124,14 @@ var handleBntEdit = function (e) {
   submitEdits.forEach(function (submitEdit) {
     submitEdit.addEventListener("click", handleSubmitEdit);
   });
-
-  console.log("btnsubmit", btnSubmits);
-  // btnSubmits.forEach(function (btnSubmit, index) {
-  //   btnSubmit.addEventListener("click", function (e) {
-  //     var submitEl = this;
-  //     console.log("index", index);
-  //     if (btnSubmit !== btnSubmits[0] && btnSubmit === btnSubmits[index]) {
-  //       e.preventDefault();
-  //       // e.stopPropagation();
-  //       console.log("btnSubmit", btnSubmit.parentElement);
-  //       inputs = document.querySelectorAll(`.form-input`);
-  //       console.log(inputs[index].value);
-
-  //       // todoListContent[index] = inputs[index].value;
-
-  //       btnSubmit.parentElement.outerHTML = `<div class="todo">
-  //               <p>${
-  //                 inputs[index].value.length >= 25
-  //                   ? inputs[index].value.slice(0, 26)
-  //                   : inputs[index].value
-  //               }</p>
-  //               <div class="action">
-  //                 <img class="btn-edit" src="./icons/edit.svg" alt="" />
-  //                 <img src="./icons/delete.svg" alt="" />
-  //               </div>
-  //             </div>`;
-  //       // btnSubmit.removeEventListener("click", handleBtnSubmit);
-  //       btnSubmits = document.querySelectorAll(".form-submit");
-  //       btnEdits = document.querySelectorAll(".btn-edit");
-  //       todoTexts = document.querySelectorAll(".todo p");
-  //       btnEdits.forEach(function (btn, index) {
-  //         // btn.removeEventListener("click", handleBntEdit);
-  //       });
-  //       // console.log(todoTexts);
-  //       // todoTexts.forEach(function (item) {
-  //       //   item.addEventListener("click", function (e) {
-  //       //     console.log("fffffffffff", e);
-  //       //     e.preventDefault();
-  //       //     // e.stopPropagation();
-  //       //     item.classList.toggle("text-line-through");
-  //       //   });
-  //       // });
-
-  //       console.log("todoListContent", todoListContent);
-  //       // document.addEventListener("mouseup", handleBtnSubmit);
-  //     }
-  //   });
-  // });
+  todoTexts = document.querySelectorAll(".todo p");
+  targetList = targetList.filter(function (item, index) {
+    if (todoTexts[index]) {
+      return todoTexts[index].classList.contains("text-line-through")
+        ? true
+        : false;
+    }
+  });
 };
 
 var handleSubmitEdit = function (e) {
@@ -153,27 +147,19 @@ var handleSubmitEdit = function (e) {
      }</p>
     <div class="action">
       <img class="btn-edit" src="./icons/edit.svg" alt="" />
-      <img src="./icons/delete.svg" alt="" />
+      <img class="btn-delete" src="./icons/delete.svg" alt="" />
     </div>
   </div>`;
   // handleTarget();
+  todoList = document.querySelector(".todo-list");
   todoListContent = todoListContent.map(function (item, index) {
     return todoList.children[index].outerHTML;
   });
-  // submitEdits = document.querySelectorAll(".todo-list .form-submit");
-  // submitEdits.forEach(function (submitEdit) {
-  //   submitEdit.addEventListener;
-  // });
-  console.log(this.parentElement.outerHTML);
-  // this.parentElement.outerHTML = `<div class="todo">
-  //   <p class="" text-line-through" : ""}">${
-  //     input.value.length >= 25 ? input.value.slice(0, 26) : input.value
-  //   }</p>
-  //   <div class="action">
-  //     <img class="btn-edit" src="./icons/edit.svg" alt="" />
-  //     <img src="./icons/delete.svg" alt="" />
-  //   </div>
-  // </div>`;
+  btnDeletes = document.querySelectorAll(".btn-delete");
+  btnDeletes.forEach(function (btnDelete, index) {
+    console.log("Delete");
+    btnDelete.addEventListener("click", handleBntDelete);
+  });
 };
 
 var handleBtnSubmit = function (e) {
@@ -195,16 +181,21 @@ var handleBtnSubmit = function (e) {
       }</p>
       <div class="action">
         <img class="btn-edit" src="./icons/edit.svg" alt="" />
-        <img src="./icons/delete.svg" alt="" />
+        <img class="btn-delete" src="./icons/delete.svg" alt="" />
       </div>
     </div>`);
       targetList.push(false);
       console.log(todoListContent);
+      // console.log(targetList);
       contentListEl(todoListContent, targetList);
       // todoList.innerHTML += newEl;
 
       input.value = null;
     }
+    btnDeletes = document.querySelectorAll(".btn-delete");
+    btnDeletes.forEach(function (btnDelete, index) {
+      btnDelete.addEventListener("click", handleBntDelete);
+    });
     btnEdits = document.querySelectorAll(".btn-edit");
     btnEdits.forEach(function (btnEdit, index) {
       btnEdit.addEventListener("click", handleBntEdit);
@@ -214,6 +205,9 @@ var handleBtnSubmit = function (e) {
 btnSubmits.forEach(function (btnSubmit) {
   if (btnSubmit === btnSubmits[0]) {
     btnSubmit.addEventListener("click", handleBtnSubmit);
+    btnEdits.forEach(function (btnEdit, index) {
+      btnEdit.removeEventListener("click", handleBntEdit);
+    });
   } else {
     btnSubmit.addEventListener("click", handleSubmitEdit);
   }
