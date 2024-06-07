@@ -33,7 +33,6 @@ carouselNextBtn.addEventListener("click", function () {
     checkboxList.children[valueInput].checked = "true";
   }
   carouselInner.style.translate = `${posision}px`;
-  console.log("aaaaaaaaaaaaaaaaa");
 });
 
 carouselPrevBtn.addEventListener("click", function () {
@@ -44,7 +43,6 @@ carouselPrevBtn.addEventListener("click", function () {
     checkboxList.children[valueInput].checked = "true";
   }
   carouselInner.style.translate = `${posision}px`;
-  console.log("aaaaaaaaaaaaaaaaa");
 });
 
 checkboxList.addEventListener("click", function (e) {
@@ -58,34 +56,23 @@ checkboxList.addEventListener("click", function (e) {
     }
   }
   carouselInner.style.translate = `${posision}px`;
-  console.log("aaaaaaaaaaaaaaaaa");
 });
 
 var clientX;
 var posisionMove = 0;
 
 var handleMousedown = function (e) {
-  e.preventDefault();
-  e.stopPropagation();
   carouselInner.classList.add("animation-none");
   clientX = e.clientX;
-  console.log(posisionMove);
   posisionMove = 0;
   document.addEventListener("mousemove", handleMousemove);
 };
 
 var handleMousemove = function (e) {
-  e.preventDefault();
-  e.stopPropagation();
   carouselInner.style.cursor = "move";
-  // console.log(posisionMove);
-
   posisionMove = -(clientX - e.clientX);
-  // console.log(posisionMove);
-  console.log(posision);
   carouselInner.style.translate = `${posision + posisionMove}px`;
   if (Math.abs(posisionMove) > itemWidth / 10) {
-    console.log(true);
     carouselInner.classList.remove("animation-none");
     carouselInner.style.cursor = "";
     if (posisionMove < 0) {
@@ -102,23 +89,18 @@ var handleMousemove = function (e) {
     }
     checkboxList.children[valueInput].checked = "true";
     carouselInner.style.translate = `${posision}px`;
-    // console.log(posision);
     document.removeEventListener("mousedown", handleMousedown);
     document.removeEventListener("mousemove", handleMousemove);
   } else {
     document.addEventListener("mouseup", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
       posisionMove = 0;
+      carouselInner.style.cursor = "";
       carouselInner.style.translate = `${posision}px`;
-
-      console.log(posision);
       carouselInner.classList.remove("animation-none");
       document.removeEventListener("mousedown", handleMousedown);
       document.removeEventListener("mousemove", handleMousemove);
     });
   }
-  console.log(posision);
 };
 
 carouselInner.addEventListener("mousedown", handleMousedown);

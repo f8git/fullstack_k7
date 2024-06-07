@@ -19,6 +19,8 @@ var targetList = [];
 
 var handleTarget = function () {
   todoTexts = document.querySelectorAll(".todo p");
+
+  console.log(todoTexts);
   todoTexts.forEach(function (item, index) {
     item.addEventListener("click", function (e) {
       e.stopPropagation();
@@ -80,34 +82,12 @@ var contentListEl = function (arr, targets) {
     if (targetList[index]) {
       item.classList.add("text-line-through");
     }
-
-    console.log(targetList);
   });
   handleTarget();
-  // todoTexts = document.querySelectorAll(".todo p");
-  // todoTexts.forEach(function (item, index) {
-  //   item.addEventListener("click", function (e) {
-  //     e.stopPropagation();
-  //     console.log("eeeeeeeee", e);
-  //     item.classList.toggle("text-line-through");
-  //     targetList[index] = item.classList.contains("text-line-through")
-  //       ? true
-  //       : false;
-  //     console.log(targetList);
-  //   });
-  // });
 };
 
 var handleBntEdit = function (e) {
-  // indexEdit.push(index);
-  console.log(indexEdit);
-
   e.preventDefault();
-  // e.stopPropagation();
-  // console.log(btn.parentElement.parentElement.children[0].innerText);
-  // console.log(btn.parentElement.parentElement.outerHTML);
-  // var editElCurrent = ;
-  // var contentElCurrent = ;
   var btnEdit = this;
   this.parentElement.parentElement.outerHTML = `<form class="form-todo">
       <input type="text" class="form-input" value="${this.parentElement.parentElement.children[0].innerText}">
@@ -149,7 +129,7 @@ var handleSubmitEdit = function (e) {
       <img class="btn-delete" src="./icons/delete.svg" alt="" />
     </div>
   </div>`;
-  // handleTarget();
+
   todoList = document.querySelector(".todo-list");
   todoListContent = todoListContent.map(function (item, index) {
     return todoList.children[index].outerHTML;
@@ -163,8 +143,23 @@ var handleSubmitEdit = function (e) {
   btnEdits.forEach(function (btnEdit, index) {
     console.log("aaaaaaaaaaaaaaaaaa");
     btnEdit.addEventListener("click", handleBntEdit);
+    todoTexts = document.querySelectorAll(".todo p");
+    handleTarget();
   });
-  handleTarget();
+
+  // todoTexts.forEach(function (item, index) {
+  //   item.addEventListener("click", function (e) {
+  //     e.stopPropagation();
+  //     e.preventDefault();
+  //     console.log("eeeeeeeee", e);
+  //     item.classList.toggle("text-line-through");
+  //     targetList[index] = item.classList.contains("text-line-through")
+  //       ? true
+  //       : false;
+  //     console.log(targetList);
+  //   });
+  // });
+  // handleTarget();
 };
 
 var handleBtnSubmit = function (e) {
