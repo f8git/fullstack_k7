@@ -53,7 +53,6 @@ carouselPrevBtn.addEventListener("click", function () {
 
 checkboxList.addEventListener("click", function (e) {
   clearInterval(interval);
-  // console.log(e.target.localName);
   if (e.target.localName === "input") {
     console.log(valueInput);
     console.log(e.target.value);
