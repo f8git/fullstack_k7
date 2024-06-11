@@ -20,7 +20,7 @@ img {
 
 .carousel .carousel-inner {
   display: flex;
-  transition: translate 0.4s ease;
+  transition: translate 0.4s ease-in-out;
 }
 
 .carousel .carousel-inner.animation-none {
