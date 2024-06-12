@@ -70,6 +70,7 @@ function testSpeech() {
           }
           return false;
         }
+
         value.name.forEach(function (item) {
           // console.log("item", item);
           if (item === speechResult) {
@@ -77,34 +78,55 @@ function testSpeech() {
             return true;
           }
           if (speechResult.includes(item)) {
-            var queryString = "";
-            if (value.link === "https://www.google.com/maps") {
-              console.log(
-                "speechResult",
-                String(speechResult).slice(String(speechResult).indexOf(item))
-              );
-              queryString =
-                "/search/" +
-                String(speechResult)
-                  .slice(String(speechResult).indexOf(item))
-                  .replace(`${item}`, "");
-            } else if (value.link === "https://zingmp3.vn") {
-              queryString =
-                "/tim-kiem/tat-ca?q=" +
-                String(speechResult)
-                  .slice(String(speechResult).indexOf(item))
-                  .replace(`${item}`, "");
-            } else if (value.link === "https://www.youtube.com") {
-              queryString =
-                "/results?search_query=" +
-                String(speechResult)
-                  .slice(String(speechResult).indexOf(item))
-                  .replace(`${item}`, "");
+            if (
+              speechResult.length ===
+              String(speechResult).slice(0, String(speechResult).indexOf(item))
+                .length +
+                item.length
+            ) {
+              if (
+                String(speechResult).slice(
+                  0,
+                  String(speechResult).indexOf(item)
+                ).length +
+                  item.length >
+                item.length
+              ) {
+                return false;
+              }
+              linkSearch = value.link.slice(0);
+            } else {
+              var queryString = "";
+              if (value.link === "https://www.google.com/maps") {
+                console.log(
+                  "speechResult",
+                  String(speechResult).slice(String(speechResult).indexOf(item))
+                );
+                queryString =
+                  "/search/" +
+                  String(speechResult)
+                    .slice(String(speechResult).indexOf(item))
+                    .replace(`${item}`, "");
+              } else if (value.link === "https://zingmp3.vn") {
+                queryString =
+                  "/tim-kiem/tat-ca?q=" +
+                  String(speechResult)
+                    .slice(String(speechResult).indexOf(item))
+                    .replace(`${item}`, "");
+              } else if (value.link === "https://www.youtube.com") {
+                queryString =
+                  "/results?search_query=" +
+                  String(speechResult)
+                    .slice(String(speechResult).indexOf(item))
+                    .replace(`${item}`, "");
+                console.log("bbbbbbbbbbb");
+              }
+              linkSearch = value.link.slice(0) + queryString;
+              console.log(linkSearch);
             }
-            linkSearch = value.link.slice(0) + queryString;
-            console.log(linkSearch);
           }
         });
+        console.log(linkSearch);
         return linkSearch;
       });
       if (findResult) {
