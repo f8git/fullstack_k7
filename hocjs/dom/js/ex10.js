@@ -48,9 +48,10 @@ progressSpan.addEventListener("mousedown", function (e) {
 
 document.addEventListener("mouseup", function () {
   document.removeEventListener("mousemove", handleDrrag);
+  // lastOffsetProgressBar = offsetProgressBar;
   currentValue = value;
   //   handleDrrag;
-  handleChange(value);
+  // handleChange(value);
   // console.log(currentValue);
 });
 
