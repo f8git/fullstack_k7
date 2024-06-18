@@ -44,7 +44,7 @@ var getLocalStorage = function () {
 };
 
 arrCart = getLocalStorage();
-console.log(arrCart);
+// console.log(arrCart);
 
 var renderCart = function (arr) {
   arr.forEach(function (item, index) {
