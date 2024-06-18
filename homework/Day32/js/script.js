@@ -29,7 +29,7 @@ var cartTextContent = document.querySelector(".text-content");
 
 // console.log(buttons);
 
-var arrCart;
+var arrCart = [];
 
 var setLocalStorage = function (arr) {
   var json = JSON.stringify(arrCart);
@@ -43,7 +43,7 @@ var getLocalStorage = function () {
   return arr;
 };
 
-arrCart = getLocalStorage();
+// arrCart = getLocalStorage();
 // console.log(arrCart);
 
 var renderCart = function (arr) {
@@ -122,8 +122,7 @@ var dataAdd = function (btn) {
     };
 
     arrCart.push(object);
-    setLocalStorage(arrCart);
-    // console.log(getLocalStorage());
+    // setLocalStorage(arrCart);
 
     var trNew = document.createElement("tr");
     for (var i = 0; i < 6; i++) {
@@ -156,9 +155,7 @@ var dataAdd = function (btn) {
         arrCart[i].sl += +tr[3].children[0].value;
         bodyCart.children[i].children[3].children[0].value = arrCart[i].sl;
         arrCart[i].price = +tr[3].children[0].value * +tr[2].innerText;
-        setLocalStorage(arrCart);
-        // json = JSON.stringify(arrCart);
-        // console.log(json);
+        // setLocalStorage(arrCart);
 
         break;
       }
@@ -216,7 +213,7 @@ btnUpdate.addEventListener("click", function (e) {
       if (!+bodyCart.children[i].children[4].innerText) {
         arrCart.splice(i, 1);
         console.log(arrCart);
-        setLocalStorage(arrCart);
+        // setLocalStorage(arrCart);
         bodyCart.innerHTML = "";
         renderCart(arrCart);
         if (!arrCart.length) {
@@ -239,7 +236,7 @@ btnDelete.addEventListener("click", function () {
     cartTable.style.display = "none";
     bodyCart.innerHTML = "";
     arrCart = [];
-    setLocalStorage(arrCart);
+    // setLocalStorage(arrCart);
     renderCart(arrCart);
   }
 });
@@ -252,7 +249,7 @@ bodyCart.addEventListener("click", function (e) {
         e.target.parentElement.parentElement.children[0].innerText - 1,
         1
       );
-      setLocalStorage(arrCart);
+      // setLocalStorage(arrCart);
       bodyCart.innerHTML = "";
       renderCart(arrCart);
       if (!arrCart.length) {
