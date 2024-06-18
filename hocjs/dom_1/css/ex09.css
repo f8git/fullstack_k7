@@ -80,4 +80,8 @@ a {
 }
 .menu li.has-children.active > a::after {
   rotate: 180deg;
+  position: relative;
+  transition-property: visibility opacity;
+  opacity: ;
+  visibility: hidden;
 }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        /* height: 50px; */
+        /* display: flex; */
+        /* align-items: center; */
+
+        /* translate: -50%; */
+        background-color: yellow;
+        z-index: 999;
+      }
+      label {
+        padding: 10px 20px;
+        border: solid 1px black;
+        cursor: pointer;
+        margin: 0px 2px;
+        border-radius: 8px;
+        background-color: white;
+      }
+      label:has(input:checked) {
+        color: red;
+      }
+      .box {
+        position: absolute;
+        top: 0px;
+      }
+      .list-select {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+      section {
+        height: 100vh;
+      }
+      .wrapper {
+        padding-top: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="list-select">
+        <label>
+          <input type="radio" name="section" checked hidden value="0" />
+          Section 1
+        </label>
+        <label>
+          <input type="radio" name="section" hidden value="1" />
+          Section 2
+        </label>
+        <label>
+          <input type="radio" name="section" hidden value="2" />
+          Section 3
+        </label>
+        <!-- <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div> -->
+      </div>
+    </header>
+    <div class="box">
+      <section>
+        <div class="wrapper wrapper-1">
+          <h2>Section 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+            nostrum consequatur numquam quibusdam est non quae expedita dolore
+            laborum, amet in ex nam explicabo assumenda aut quasi distinctio
+            nobis officiis.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="wrapper wrapper-2">
+          <h2>Section 2</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati
+            sint, nesciunt delectus iusto, iure ullam praesentium unde minus
+            blanditiis harum commodi. Omnis asperiores minus harum, adipisci
+            ratione temporibus aliquid aut?
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="wrapper wrapper-3">
+          <h2>Section 3</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
+            architecto repellat error commodi ex aperiam maxime facilis debitis
+            laborum, fuga, qui quasi. Dolores maxime laboriosam non, repudiandae
+            impedit eius? Eaque.
+          </p>
+        </div>
+      </section>
+    </div>
+    <script src="./js/ex16.js"></script>
+  </body>
+</html>

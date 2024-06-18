@@ -1,0 +1,48 @@
+table,
+th,
+td {
+  border: solid 1px black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+}
+
+.product-table tr td:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+td:last-child,
+th:last-child {
+  width: 200px;
+}
+
+td:first-child,
+th:first-child {
+  width: 30px;
+}
+
+.cart-table th:nth-of-type(3),
+.cart-table td:nth-of-type(3) {
+  width: 250px;
+}
+.cart-table th:nth-of-type(2),
+.cart-table td:nth-of-type(2) {
+  width: 500px;
+}
+
+.cart-table tr:last-child td {
+  width: auto;
+}
+
+.btn-delete,
+.btn-update {
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.cart {
+  display: none;
+}
