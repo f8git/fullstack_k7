@@ -9,6 +9,10 @@ table {
   width: 100%;
 }
 
+button {
+  cursor: pointer;
+}
+
 .product-table tr td:last-child {
   display: flex;
   flex-direction: column;
