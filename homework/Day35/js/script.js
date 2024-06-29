@@ -4,6 +4,13 @@ var menuBtn = document.querySelectorAll(".dropdown-menu button");
 var textContent = document.querySelector(".text-content");
 var controlBtn = document.querySelectorAll(".control-btn button");
 var colorBtn = document.querySelector(".color");
+var charector = document.querySelector(".charector");
+var word = document.querySelector(".word");
+var textNodeCharector = document.createTextNode(0);
+var textNodeword = document.createTextNode(0);
+
+charector.append(textNodeCharector);
+word.append(textNodeword);
 
 toggleBtn.addEventListener("click", handleToggle);
 function handleToggle(e) {
@@ -34,12 +41,13 @@ menuBtn.forEach(function (item) {
     if (item.className === "txt") {
       saveAsTxt(input.value);
     }
+    if (item.className === "new") {
+      input.value = "untitled";
+      textContent.innerHTML = "";
+    }
   });
 });
 
-// textContent.addEventListener("focus", function (e) {
-//   console.log(e);
-// });
 controlBtn.forEach(function (btn) {
   btn.addEventListener("click", function (e) {
     e.stopPropagation();
@@ -95,3 +103,24 @@ function saveAsTxt(filename) {
   element.click();
   document.body.removeChild(element);
 }
+
+textContent.addEventListener("keyup", function (e) {
+  // console.log(e.target);
+  console.log();
+  if (e.key === "Enter") {
+  }
+  let str = textContent.innerText;
+  console.log(str);
+  let wordsList = str.trim().replaceAll(/\s+/g, " ").split(" ");
+  let count = wordsList.length;
+  console.log(wordsList);
+  var charectorConut = 0;
+  wordsList.forEach(function (item) {
+    // console.log(item);
+    charectorConut += item.replaceAll(" ", "").length;
+
+    textNodeCharector.data = charectorConut;
+  });
+
+  textNodeword.data = count;
+});
