@@ -44,6 +44,8 @@ menuBtn.forEach(function (item) {
     if (item.className === "new") {
       input.value = "untitled";
       textContent.innerHTML = "";
+      textNodeword.data = 0;
+      textNodeCharector.data = 0;
     }
   });
 });
