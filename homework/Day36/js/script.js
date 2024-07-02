@@ -5,28 +5,28 @@ let id;
 
 button.classList.add("disabled");
 
-spanTimer.innerText = "29";
-// console.log(timer);
+spanTimer.innerText = "30";
 
 let timeCurrent = 0;
 let flag = false;
 
-let timeLast = new Date().getSeconds();
+let timeLast = performance.now();
+console.log(timeLast);
 let timeProgress = 0;
 
 function a() {
-  let end = new Date().getSeconds();
+  let end = performance.now();
   timeProgress = end - timeLast;
   if (!flag) {
-    timeCurrent = 10 - timeProgress;
+    timeCurrent = 30 * 1000 - timeProgress;
   } else {
     flag = false;
   }
 
-  if (timeCurrent !== end) {
-    spanTimer.innerText = timeCurrent;
+  if (Math.floor(timeCurrent) !== Math.floor(end)) {
+    spanTimer.innerText = Math.floor(timeCurrent / 1000);
   }
-  if (+spanTimer.innerText === 0) {
+  if (+spanTimer.innerText <= 0) {
     button.classList.remove("disabled");
     button.style.cursor = "pointer";
     button.addEventListener("click", function () {
@@ -34,7 +34,7 @@ function a() {
     });
   }
 
-  if (+spanTimer.innerText === 0) {
+  if (+spanTimer.innerText <= 0) {
     spanTimer.innerText = "0";
     return;
   }
@@ -46,7 +46,7 @@ id = requestAnimationFrame(a);
 document.addEventListener("visibilitychange", (event) => {
   if (document.visibilityState === "visible") {
     requestAnimationFrame(a);
-    timeLast = new Date().getSeconds() - timeProgress;
+    timeLast = performance.now() - timeProgress;
     console.log(1);
   } else {
     flag = true;
@@ -54,3 +54,5 @@ document.addEventListener("visibilitychange", (event) => {
     console.log(2);
   }
 });
+
+console.log(new Date().getSeconds());
